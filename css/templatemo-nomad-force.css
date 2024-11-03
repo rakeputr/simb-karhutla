@@ -218,7 +218,7 @@ strong {
 }
 
 .navbar-brand {
-  color: var(--primary-color);
+  color: rgb(43, 255, 0);
   font-size: 24px;
   font-weight: var(--font-weight-bold);
 }
@@ -233,7 +233,7 @@ strong {
   font-family: bootstrap-icons;
   display: inline-block;
   margin-left: 10px;
-  color: var(--primary-color);
+  color: rgb(43, 255, 0);
   opacity: 0;
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
   -moz-transition: opacity 0.3s, -moz-transform 0.3s;
@@ -259,7 +259,7 @@ strong {
 
 .navbar-nav .nav-link:hover::after,
 .navbar-nav .nav-item.active .nav-link::after {
-  color: var(--primary-color);
+  color: rgb(43, 255, 0);
   opacity: 1;
   -webkit-transform: translateY(0px);
   -moz-transform: translateY(0px);
