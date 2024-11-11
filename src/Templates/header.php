@@ -13,11 +13,11 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap"
     rel="stylesheet" />
-  <link href="/public/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="/public/css/bootstrap-icons.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/public/css/magnific-popup.css" />
-  <link href="/public/css/aos.css" rel="stylesheet" />
-  <link href="/public/css/templatemo-nomad-force.css" rel="stylesheet" />
+  <link href="<?= Route::createUrl('css/bootstrap.min.css'); ?>" rel="stylesheet" />
+  <link href="<?= Route::createUrl('css/bootstrap-icons.css'); ?>" rel="stylesheet" />
+  <link rel="stylesheet" href="<?= Route::createUrl('css/magnific-popup.css'); ?>" />
+  <link href="<?= Route::createUrl('css/aos.css'); ?>" rel="stylesheet" />
+  <link href="<?= Route::createUrl('css/templatemo-nomad-force.css'); ?>" rel="stylesheet" />
 </head>
 
 <body>

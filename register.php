@@ -2,9 +2,9 @@
 
 session_start();
 
-require_once(__DIR__ . '/../src/Facades/Auth.php');
-require_once(__DIR__ . '/../src/Facades/Route.php');
-require_once(__DIR__ . '/../src/Facades/FlashSession.php');
+require_once(__DIR__ . '/src/Facades/Auth.php');
+require_once(__DIR__ . '/src/Facades/Route.php');
+require_once(__DIR__ . '/src/Facades/FlashSession.php');
 
 Auth::logout();
 
@@ -28,7 +28,7 @@ if (Auth::isLogged()) {
 
 ?>
 
-<?php include(__DIR__ . '/../src/Templates/header.php') ?>
+<?php include(__DIR__ . '/src/Templates/header.php') ?>
 
 <main>
   <form method="post">
@@ -45,4 +45,4 @@ if (Auth::isLogged()) {
   </form>
 </main>
 
-<?php include(__DIR__ . '/../src/Templates/footer.php') ?>
+<?php include(__DIR__ . '/src/Templates/footer.php') ?>
