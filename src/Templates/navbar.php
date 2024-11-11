@@ -4,7 +4,7 @@ require_once(__DIR__ . '/../Facades/Route.php');
 ?>
 <nav class="navbar navbar-expand-lg bg-dark-subtle shadow-lg">
   <div class="container">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand" href="index.php">
       <strong>Pantau Api</strong>
     </a>
 
@@ -22,23 +22,23 @@ require_once(__DIR__ . '/../Facades/Route.php');
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#hero">Homed</a>
+          <a class="nav-link" href="index.php#news">News</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#about">Our Studio</a>
+          <a class="nav-link" href="gtk.html">Get To Know</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#portfolio">Portfolio</a>
+          <a class="nav-link" href="#portfolio">About Us</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#news">Berita</a>
+          <a class="nav-link" href="info.php">Pelaporan</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact Us</a>
+          <a class="nav-link" href="admin/dashboard.php">Admin(doang)</a>
         </li>
 
         <?php if (Auth::isLogged()): ?>
