@@ -211,7 +211,7 @@
 
                         <div class="col-lg-6 col-12 mb-5 mb-lg-0">
                             <div class="news-thumb" data-aos="fade-up">
-                                <a href="news-detail.html" class="news-image-hover news-image-hover-warning">
+                                <a href="news-detail.php" class="news-image-hover news-image-hover-warning">
                                     <img src="images/news/news1.jpeg" class="img-fluid large-news-image news-image" alt="">
                                 </a>
 
@@ -219,7 +219,7 @@
                                 
                                 <div class="news-text-info">
                                     <h5 class="news-title">
-                                        <a href="news-detail.html" class="news-title-link">Kebakaran Hutan dan Lahan Marak Terjadi, Berikut Cara Pencegahannya!</a>
+                                        <a href="news-detail.php" class="news-title-link">Kebakaran Hutan dan Lahan Marak Terjadi, Berikut Cara Pencegahannya!</a>
                                     </h5>
 
                                     <span class="text-muted">07 November 2023</span>
@@ -231,7 +231,7 @@
                             <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
                                 <div class="news-top w-100">
                                     
-                                    <a href="news-detail2.html" class="news-image-hover news-image-hover-primary">
+                                    <a href="news-detail2.php" class="news-image-hover news-image-hover-primary">
                                         <img src="images/news/news2.jpg" class="img-fluid news-image" alt="">
                                     </a>
 
@@ -241,7 +241,7 @@
                                 <div class="news-bottom w-100">
                                     <div class="news-text-info">
                                         <h5 class="news-title">
-                                            <a href="news-detail2.html" class="news-title-link">PBB: Tahun 2050, Kebakaran Hutan Berpotensi Meningkat 30%</a>
+                                            <a href="news-detail2.php" class="news-title-link">PBB: Tahun 2050, Kebakaran Hutan Berpotensi Meningkat 30%</a>
                                         </h5>
 
                                         <div class="d-flex flex-wrap">                                       
@@ -254,7 +254,7 @@
                             <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
                                 <div class="news-top w-100" data-aos="fade-up">
                                     
-                                    <a href="news-detail3.html" class="news-image-hover news-image-hover-success">
+                                    <a href="news-detail3.php" class="news-image-hover news-image-hover-success">
                                         <img src="images/news/news3.jpg" class="img-fluid news-image" alt="">
                                     </a>
 
@@ -264,7 +264,7 @@
                                 <div class="news-bottom w-100">
                                     <div class="news-text-info">
                                         <h5 class="news-title">
-                                            <a href="news-detail3.html" class="news-title-link">Karhutla 2021, KLHK Mulai Langkah Pencegahan dan Penanganan</a>
+                                            <a href="news-detail3.php" class="news-title-link">Karhutla 2021, KLHK Mulai Langkah Pencegahan dan Penanganan</a>
                                         </h5>
 
                                         <span class="text-muted">21 Agustus 2021</span>
