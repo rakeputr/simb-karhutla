@@ -55,7 +55,7 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#hero">Home</a>
+                                <a class="nav-link" href="#hero">Homed</a>
                             </li>
 
                             <li class="nav-item">
@@ -284,7 +284,7 @@
                             <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
                                 <div class="news-top w-100">
                                     
-                                    <a href="news-detail2.html" class="news-image-hover news-image-hover-primary">
+                                    <a href="news-detail.html" class="news-image-hover news-image-hover-primary">
                                         <img src="images/news/news2.jpg" class="img-fluid news-image" alt="">
                                     </a>
 
@@ -294,7 +294,7 @@
                                 <div class="news-bottom w-100">
                                     <div class="news-text-info">
                                         <h5 class="news-title">
-                                            <a href="news-detail2.html" class="news-title-link">PBB: Tahun 2050, Kebakaran Hutan Berpotensi Meningkat 30%</a>
+                                            <a href="news-detail.html" class="news-title-link">PBB: Tahun 2050, Kebakaran Hutan Berpotensi Meningkat 30%</a>
                                         </h5>
 
                                         <div class="d-flex flex-wrap">                                       
@@ -307,7 +307,7 @@
                             <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
                                 <div class="news-top w-100" data-aos="fade-up">
                                     
-                                    <a href="news-detail3.html" class="news-image-hover news-image-hover-success">
+                                    <a href="news-detail.html" class="news-image-hover news-image-hover-success">
                                         <img src="images/news/news3.jpg" class="img-fluid news-image" alt="">
                                     </a>
 
@@ -317,7 +317,7 @@
                                 <div class="news-bottom w-100">
                                     <div class="news-text-info">
                                         <h5 class="news-title">
-                                            <a href="news-detail3.html" class="news-title-link">Karhutla 2021, KLHK Mulai Langkah Pencegahan dan Penanganan</a>
+                                            <a href="news-detail.html" class="news-title-link">Karhutla 2021, KLHK Mulai Langkah Pencegahan dan Penanganan</a>
                                         </h5>
 
                                         <span class="text-muted">21 Agustus 2021</span>
@@ -343,7 +343,7 @@
                                 <div class="row">
                                     
                                     <div class="col-lg-6 col-6">
-                                        <label for="name" class="form-label">Nama <sup class="text-danger">*</sup></label>
+                                        <label for="name" class="form-label">Name <sup class="text-danger">*</sup></label>
 
                                         <input type="text" name="name" id="name" class="form-control" placeholder="Full name" required>
                                     </div>
@@ -391,7 +391,7 @@
                                 </div>
 
                                 <div class="col-lg-5 col-12 mx-auto mt-5">
-                                    <button type="submit" class="form-control">Kirim Pesan</button>
+                                    <button type="submit" class="form-control">Send Message</button>
                                 </div>
                             </form>
                         </div>
