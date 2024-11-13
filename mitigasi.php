@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<!-- <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Dampak</title>
+    <title>Mitigasi</title>
 
     <style >[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid] {display: none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -27,7 +27,10 @@
     <link rel="stylesheet" type="text/css" href="https://pantaugambut.id/css/bootstrap.css?id=33252b3bead066e1b66d">
     <link rel="stylesheet" type="text/css" href="https://pantaugambut.id/css/default.css?id=aed78a0e6c2e2253aa11">
     <link rel="stylesheet" type="text/css" href="https://pantaugambut.id/css/jquery.rs.carousel.css">
-</head>
+</head> -->
+
+<?php include(__DIR__ . 'src/Templates/header.php'); ?>
+
 <body>
     <!-- <header>
         <nav class="navbar navbar-expand-lg align-items-md-center align-items-lg-start">
@@ -152,7 +155,7 @@
    <a href="gtk.html" class="back">Kembali</a>
 <div class="container intro mb-0" >
    <label class="category">Kebakaran Hutan &amp; Lahan</label>
-   <h1 class="with-line"><span>Dampak</span></h1>
+   <h1 class="with-line"><span>Mitigasi</span></h1>
    <div class="lead mb-0">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In magna felis, cursus ut maximus nec, posuere eget orci. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus eget tellus luctus, placerat purus ac, bibendum sapien. Nulla quam ipsum, fringilla et iaculis id, luctus non arcu. </p>
 </div>
@@ -189,10 +192,10 @@
                     <div class="lead mb-0">
                         <p>Sebelumnya</p>
                     </div>
-                    <a href="mitigasi.html">
-                        <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-5-BA2OU.png" alt="">
+                    <a href="pengertian.html">
+                        <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-1-DuhWD.png" alt="">
                         <div class="text with-line">
-                            <span>Mitigasi</span>
+                            <span>Pengertian</span>
                         </div>
                     </a>
                 </div>
@@ -200,10 +203,10 @@
                     <div class="lead mb-0">
                         <p>Selanjutnya</p>
                     </div>
-                    <a href="penanggulangan.html">
-                        <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-4-FVXdZ.png" alt="">
+                    <a href="dampak.html">
+                        <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-3-8ZJjo.png" alt="">
                         <div class="text with-line">
-                            <span>Penanggulangan</span>
+                            <span>Dampak</span>
                         </div>
                     </a>
                 </div>
