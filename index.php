@@ -1,23 +1,4 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <title>Pantau Api</title>
-        <!-- CSS FILES -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/magnific-popup.css">
-        <link href="css/aos.css" rel="stylesheet">
-        <link href="css/templatemo-nomad-force.css" rel="stylesheet">
-    </head>
-    
-    <body>
+<?php include (__DIR__ . '/src/Templates/header.php'); ?>
         <main>
 
             <section class="hero" id="hero">
@@ -42,41 +23,7 @@
                 <div class="overlay"></div>
             </section>
 
-            <nav class="navbar navbar-expand-lg bg-dark-subtle shadow-lg">
-                <div class="container">
-                    <a class="navbar-brand" href="index.html">
-                        <strong>Pantau Api</strong>
-                    </a>
-
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav mx-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#hero">Homed</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#about">Our Studio</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#portfolio">Portfolio</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#news">Berita</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#contact">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            <?php include (__DIR__ . '/src/Templates/navbar.php') ?>
 
             <section class="section-padding pb-0" id="about">
                 <div class="container mb-5 pb-lg-5">
@@ -264,7 +211,7 @@
 
                         <div class="col-lg-6 col-12 mb-5 mb-lg-0">
                             <div class="news-thumb" data-aos="fade-up">
-                                <a href="news-detail.html" class="news-image-hover news-image-hover-warning">
+                                <a href="news-detail.php" class="news-image-hover news-image-hover-warning">
                                     <img src="images/news/news1.jpeg" class="img-fluid large-news-image news-image" alt="">
                                 </a>
 
@@ -272,7 +219,7 @@
                                 
                                 <div class="news-text-info">
                                     <h5 class="news-title">
-                                        <a href="news-detail.html" class="news-title-link">Kebakaran Hutan dan Lahan Marak Terjadi, Berikut Cara Pencegahannya!</a>
+                                        <a href="news-detail.php" class="news-title-link">Kebakaran Hutan dan Lahan Marak Terjadi, Berikut Cara Pencegahannya!</a>
                                     </h5>
 
                                     <span class="text-muted">07 November 2023</span>
@@ -284,7 +231,7 @@
                             <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
                                 <div class="news-top w-100">
                                     
-                                    <a href="news-detail.html" class="news-image-hover news-image-hover-primary">
+                                    <a href="news-detail2.php" class="news-image-hover news-image-hover-primary">
                                         <img src="images/news/news2.jpg" class="img-fluid news-image" alt="">
                                     </a>
 
@@ -294,7 +241,7 @@
                                 <div class="news-bottom w-100">
                                     <div class="news-text-info">
                                         <h5 class="news-title">
-                                            <a href="news-detail.html" class="news-title-link">PBB: Tahun 2050, Kebakaran Hutan Berpotensi Meningkat 30%</a>
+                                            <a href="news-detail2.php" class="news-title-link">PBB: Tahun 2050, Kebakaran Hutan Berpotensi Meningkat 30%</a>
                                         </h5>
 
                                         <div class="d-flex flex-wrap">                                       
@@ -307,7 +254,7 @@
                             <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
                                 <div class="news-top w-100" data-aos="fade-up">
                                     
-                                    <a href="news-detail.html" class="news-image-hover news-image-hover-success">
+                                    <a href="news-detail3.php" class="news-image-hover news-image-hover-success">
                                         <img src="images/news/news3.jpg" class="img-fluid news-image" alt="">
                                     </a>
 
@@ -317,7 +264,7 @@
                                 <div class="news-bottom w-100">
                                     <div class="news-text-info">
                                         <h5 class="news-title">
-                                            <a href="news-detail.html" class="news-title-link">Karhutla 2021, KLHK Mulai Langkah Pencegahan dan Penanganan</a>
+                                            <a href="news-detail3.php" class="news-title-link">Karhutla 2021, KLHK Mulai Langkah Pencegahan dan Penanganan</a>
                                         </h5>
 
                                         <span class="text-muted">21 Agustus 2021</span>
@@ -343,7 +290,7 @@
                                 <div class="row">
                                     
                                     <div class="col-lg-6 col-6">
-                                        <label for="name" class="form-label">Name <sup class="text-danger">*</sup></label>
+                                        <label for="name" class="form-label">Nama <sup class="text-danger">*</sup></label>
 
                                         <input type="text" name="name" id="name" class="form-control" placeholder="Full name" required>
                                     </div>
@@ -391,7 +338,7 @@
                                 </div>
 
                                 <div class="col-lg-5 col-12 mx-auto mt-5">
-                                    <button type="submit" class="form-control">Send Message</button>
+                                    <button type="submit" class="form-control">Kirim Pesan</button>
                                 </div>
                             </form>
                         </div>

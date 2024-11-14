@@ -1,3 +1,7 @@
+<?php
+require_once (__DIR__ . '/../Facades/Route.php');
+?>
+
 <!doctype html>
 <html lang="en">
   <head>

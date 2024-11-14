@@ -1,5 +1,5 @@
 <html lang="id" style="overflow: visible; height: initial;">
-    <head>
+    <!-- <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -26,8 +26,9 @@
     <link rel="stylesheet" type="text/css" href="https://pantaugambut.id/css/default.css?id=aed78a0e6c2e2253aa11">
     <link rel="stylesheet" type="text/css" href="https://pantaugambut.id/css/jquery.fullPage.css">
 
-</head>
+</head> -->
 
+<?php include(__DIR__ . 'src/Templates/header.php'); ?>
 
 <body data-aos-easing="ease" data-aos-duration="500" data-aos-delay="0" style="overflow: visible; height: initial;" class="fp-responsive fp-viewing-tata-kelola-gambut-indonesia" data-new-gr-c-s-check-loaded="14.1088.0" data-gr-ext-installed="">
     <div id="Content">
@@ -103,7 +104,7 @@
             </div>
         </div>
         
-        <h1 class="text-center">INI SEMUA BAWAHNYA BELUM DI GANTI</h1>
+        <h1 class="text-center">INI SEMUA BAWAHNYA BELUM</h1>
 
 
         <div class="section fp-section" id="link-apa-itu-gambut" data-anchor="apa-itu-gambut" style="height: 642px;">

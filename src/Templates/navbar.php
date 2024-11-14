@@ -22,7 +22,7 @@ require_once(__DIR__ . '/../Facades/Route.php');
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="index.php#news">News</a>
+          <a class="nav-link" href="index.php#news">Berita</a>
         </li>
 
         <li class="nav-item">
