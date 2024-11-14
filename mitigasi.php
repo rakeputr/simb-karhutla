@@ -156,7 +156,9 @@
    <label class="category">Kebakaran Hutan &amp; Lahan</label>
    <h1 class="with-line"><span>Mitigasi</span></h1>
    <div class="lead mb-0">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In magna felis, cursus ut maximus nec, posuere eget orci. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus eget tellus luctus, placerat purus ac, bibendum sapien. Nulla quam ipsum, fringilla et iaculis id, luctus non arcu. </p>
+    <p>
+        Mitigasi bencana merupakan serangkaian kegiatan yang berfokus pada upaya memperkecil risiko bencana berupa jumlah korban dan kerugian yang dapat terjadi akibat bencana alam.
+    </p>
 </div>
 </div>
 
@@ -176,10 +178,52 @@
     <div class="k-widget text-based text">
         <div class="container" >
             <div class="W730">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In magna felis, cursus ut maximus nec, posuere eget orci. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus eget tellus luctus, placerat purus ac, bibendum sapien. Nulla quam ipsum, fringilla et iaculis id, luctus non arcu. Mauris non ullamcorper metus. Sed nec enim sem. Proin egestas aliquet rhoncus. Donec ac pulvinar nulla. Etiam finibus elit non erat rhoncus lacinia. </p>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In magna felis, cursus ut maximus nec, posuere eget orci. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus eget tellus luctus, placerat purus ac, bibendum sapien. Nulla quam ipsum, fringilla et iaculis id, luctus non arcu. Mauris non ullamcorper metus. Sed nec enim sem. Proin egestas aliquet rhoncus. Donec ac pulvinar nulla. Etiam finibus elit non erat rhoncus lacinia. </p>
+            <div class="lead mb-0">
+                     <p>
+                        Langkah-langkah mitigasi bencana kebakaran hutan dan lahan:
+                    </p>
             </div>
+            <br>
+            <div class="lead mb-0">
+                     <p>
+                        1.Pengelolaan Berkala
+                    </p>
+            </div>
+            <br>
+                    <p>Pengelolaan berkala dilakukan dengan cara konservasi lahan basah agar tidak menjadi lahan kritis, lalu membuat sistem irigasi di sekitar daerah rawan kebakaran agar air dapat diatur secara efektif, lalu pemberian kapur pertanian seperti kaptan dan dolomit kepada tanah agar pH tanah menjadi netral </p>
+                    <br>
+            <div class="lead mb-0">
+                     <p>
+                        2.Penegakan Hukum
+                    </p>
+            </div>
+            <br>
+                    <p>
+                        Berdasarkan Undang-Undang Dasar Republik Indonesia No. 41 Tahun 1999 Tentang Kehutanan pasal 3
+                        Penyelenggaraan kehutanan bertujuan untuk sebesar-besar kemakmuran rakyat yang berkeadilan dan berkelanjutan dengan:</p>
+                            <ul>
+                                <li>Menjamin keberadaan hutan dengan luasan yang cukup dan sebaran yang proporsional;</li>
+                                <li>Mengoptimalkan aneka fungsi hutan yang meliputi fungsi konservasi, fungsi lindung, dan fungsi produksi untuk mencapai manfaat lingkungan, sosial, budaya, dan ekonomi, yang seimbang dan lestari;</li>
+                                <li>Meningkatkan daya dukung daerah aliran sungai;</li>
+                                <li>Meningkatkan kemampuan untuk mengembangkan kapasitas dan keberdayaan masyarakat secara partisipatif, berkeadilan, dan berwawasan lingkungan sehingga mampu menciptakan ketahanan sosial dan ekonomi serta ketahanan terhadap akibat perubahan eksternal; dan</li>
+                                <li>Menjamin distribusi manfaat yang berkeadilan dan berkelanjutan.</li>
+                            </ul>                        
+                    <br>
+            <div class="lead mb-0">
+                     <p>
+                        3. Edukasi masyarakat
+                    </p>
+            </div>
+            <br>
+                    <p>
+                    Meningkatkan kesadaran masyarakat tentang pentingnya menjaga lingkungan dan bahaya dari kebakaran hutan melalui edukasi dan kampanye sosialisasi. Informasi tentang cara-cara pencegahan kebakaran harus mudah diakses oleh masyarakat.
+                    </p>
+                    <br>
+
+
+
+
+                </div>
         </div>
     </div> 
 </section>
