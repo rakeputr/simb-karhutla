@@ -2,7 +2,12 @@
 require_once(__DIR__ . '/../Facades/Auth.php');
 require_once(__DIR__ . '/../Facades/Route.php');
 ?>
-<nav class="navbar navbar-expand-lg bg-dark-subtle shadow-lg">
+<style>
+  .navbar-nav .nav-link:hover {
+    color: rgb(255, 140, 0) !important;
+  }
+</style>
+<nav class="navbar navbar-expand-lg bg-light shadow-lg">
   <div class="container">
     <a class="navbar-brand" href="index.php">
       <strong>Pantau Api</strong>
