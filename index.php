@@ -72,7 +72,7 @@
                                         <img src="images/people/studio-shot-beautiful-happy-retired-caucasian-female-with-pixie-hairdo-crossing-arms-her-chest-having-confident-look-smiling-broadly.jpg" class="img-fluid team-image" alt="">
 
                                         <div class="team-thumb bg-warning">
-                                            <h3 class="text-white mb-0">Susane R.</h3>
+                                            <h3 class="text-white mb-0">Rake Putri</h3>
 
                                             <p class="text-secondary-white-color mb-0">Founding Partner</p>
                                         </div>
@@ -82,17 +82,17 @@
                                         <img src="images/people/project-leder-with-disabilities-looking-front-sitting-immobilized-wheelchair-business-office-room.jpg" class="img-fluid team-image" alt="">
 
                                         <div class="team-thumb bg-primary">
-                                            <h3 class="text-white mb-0">Morgan S.</h3>
+                                            <h3 class="text-white mb-0">Adriano</h3>
 
                                             <p class="text-secondary-white-color mb-0">CEO & Investor</p>
                                         </div>
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="images/people/asia-business-woman-feeling-happy-smiling-looking-camera-while-relax-home-office.jpg" class="img-fluid team-image" alt="">
+                                        <img src="images/people/fera.jpeg" class="img-fluid team-image" alt="">
 
                                         <div class="team-thumb bg-success">
-                                            <h3 class="text-white mb-0">Naomi W.</h3>
+                                            <h3 class="text-white mb-0">Ferawati Ginting</h3>
 
                                             <p class="text-secondary-white-color mb-0">Art Director</p>
                                         </div>
