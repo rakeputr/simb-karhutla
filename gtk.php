@@ -28,7 +28,7 @@
 
 </head> -->
 
-<?php include(__DIR__ . 'src/Templates/header.php'); ?>
+<?php include(__DIR__ . '\src\Templates\header.php'); ?>
 
 <body data-aos-easing="ease" data-aos-duration="500" data-aos-delay="0" style="overflow: visible; height: initial;" class="fp-responsive fp-viewing-tata-kelola-gambut-indonesia" data-new-gr-c-s-check-loaded="14.1088.0" data-gr-ext-installed="">
     <div id="Content">
@@ -67,7 +67,7 @@
                         </div>
                         
                         <div class="child four-child">                                                                             
-                            <a href="pengertian.html">
+                            <a href="pengertian.php">
                                 <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-1-DuhWD.png" alt="ikon Sejarah">
                                 <div>
                                     <div class="number"><span>1</span></div>
@@ -75,7 +75,7 @@
                                 </div>
                             </a>
 
-                            <a href="mitigasi.html" title="null">
+                            <a href="mitigasi.php" title="null">
                                 <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-5-BA2OU.png" alt="Ikon Dampak">
                                 <div>
                                     <div class="number"><span>2</span></div>
@@ -83,7 +83,7 @@
                                 </div>
                             </a>
 
-                            <a href="dampak.html">
+                            <a href="dampak.php">
                                 <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-3-8ZJjo.png" alt="Ikon Dampak ">
                                 <div>
                                     <div class="number"><span>3</span></div>
@@ -91,7 +91,7 @@
                                 </div>
                             </a>
 
-                            <a href="penanggulangan.html">
+                            <a href="penanggulangan.php">
                                 <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-4-FVXdZ.png" alt="Ikon Tantangan">
                                 <div>
                                     <div class="number"><span>4</span></div>

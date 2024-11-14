@@ -26,7 +26,7 @@ require_once(__DIR__ . '/../Facades/Route.php');
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="gtk.html">Get To Know</a>
+          <a class="nav-link" href="gtk.php">Get To Know</a>
         </li>
 
         <li class="nav-item">
