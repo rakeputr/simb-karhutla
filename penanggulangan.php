@@ -29,8 +29,7 @@
     <link rel="stylesheet" type="text/css" href="https://pantaugambut.id/css/jquery.rs.carousel.css">
 </head> -->
 
-<?php include(__DIR__ . 'src/Templates/header.php'); ?>
-
+<?php include(__DIR__ . '\src\Templates\header.php'); ?>
 
 <body>
     <!-- <header>
@@ -125,25 +124,25 @@
    <div class="nav carousel">
        <ul>
             <li>
-                <a href="pengertian.html">
+                <a href="pengertian.php">
                     <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-1-DuhWD.png">
                     <span>Pengertian</span>
                 </a>
             </li>
             <li>
-                <a href="mitigasi.html">
+                <a href="mitigasi.php">
                     <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-5-BA2OU.png">
                     <span>Mitigasi</span>
                 </a>
             </li>
             <li> 
-                <a href="dampak.html">
+                <a href="dampak.php">
                     <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-3-8ZJjo.png">
                     <span>Dampak</span>
                 </a>
             </li>
             <li>
-                <a href="penanggulangan.html">
+                <a href="penanggulangan.php">
                     <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-4-FVXdZ.png">
                     <span>Penanggulangan</span>
                 </a>
@@ -153,7 +152,7 @@
     </section>
 
     <section id="pelajari-detail">
-   <a href="gtk.html" class="back">Kembali</a>
+   <a href="gtk.php" class="back">Kembali</a>
 <div class="container intro mb-0" >
    <label class="category">Kebakaran Hutan &amp; Lahan</label>
    <h1 class="with-line"><span>Penanggulangan</span></h1>
@@ -193,7 +192,7 @@
                     <div class="lead mb-0">
                         <p>Sebelumnya</p>
                     </div>
-                    <a href="mitigasi.html">
+                    <a href="mitigasi.php">
                         <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-3-8ZJjo.png" alt="">
                         <div class="text with-line">
                             <span>Dampak</span>
