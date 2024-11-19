@@ -102,7 +102,7 @@
                             <span class="d-block" data-aos="zoom-in">Berita Selanjutnya</span>
 
                             <h3 class="news-title" data-aos="fade-up">
-                                <a href="news-detail2.html" class="news-title-link">PBB: Tahun 2050, Kebakaran Hutan Berpotensi Meningkat 30 Persen
+                                <a href="news-detail2.php" class="news-title-link">PBB: Tahun 2050, Kebakaran Hutan Berpotensi Meningkat 30 Persen
                                 </a>
                             </h3>
                         </div>
