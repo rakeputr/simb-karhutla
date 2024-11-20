@@ -10,5 +10,5 @@ interface InformationRepository
 
     public function setVerifiedById(int $id, int $admin_id): bool;
 
-    public function insert(int $userId, string $dateOccured, string $place, string $chronology): bool;
+    public function insert(int $userId, string $tglKejadian, string $tempat, string $provinsi, string $koordinat, string $kronologi): bool;
 }
