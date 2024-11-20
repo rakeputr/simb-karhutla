@@ -28,7 +28,7 @@
 
 </head> -->
 
-<?php include(__DIR__ . '\src\Templates\head buat gtk.php'); ?>
+<?php include(__DIR__ . '/src/Templates/head_gtk.php'); ?>
 
 <body data-aos-easing="ease" data-aos-duration="500" data-aos-delay="0" style="overflow: visible; height: initial;" class="fp-responsive fp-viewing-tata-kelola-gambut-indonesia" data-new-gr-c-s-check-loaded="14.1088.0" data-gr-ext-installed="">
     
