@@ -21,12 +21,17 @@ require_once (__DIR__ . '/../Facades/Route.php');
     <link rel="stylesheet" type="text/css" href="https://pantaugambut.id/css/default.css?id=aed78a0e6c2e2253aa11">
     <link rel="stylesheet" type="text/css" href="https://pantaugambut.id/css/jquery.fullPage.css">
     <link href="<?= Route::createUrl('css/bootstrap.min.css'); ?>" rel="stylesheet" />
-      <link href="<?= Route::createUrl('css/bootstrap-icons.css'); ?>" rel="stylesheet" />
-      <link rel="stylesheet" href="<?= Route::createUrl('css/magnific-popup.css'); ?>" />
-      <link href="<?= Route::createUrl('css/aos.css'); ?>" rel="stylesheet" />
-      <link href="<?= Route::createUrl('css/templatemo-nomad-force.css'); ?>" rel="stylesheet" />
+    <link href="<?= Route::createUrl('css/bootstrap-icons.css'); ?>" rel="stylesheet" />
+    <link rel="stylesheet" href="<?= Route::createUrl('css/magnific-popup.css'); ?>" />
+    <link href="<?= Route::createUrl('css/aos.css'); ?>" rel="stylesheet" />
+    <link href="<?= Route::createUrl('css/templatemo-nomad-force.css'); ?>" rel="stylesheet" />
 
-
+    <style>
+      span {
+        font-family: 'Poppins', sans-serif;
+        color: rgb(255, 140, 0);
+      }
+    </style>
   </head>
 
 <body>

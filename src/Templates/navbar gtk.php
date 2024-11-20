@@ -7,7 +7,7 @@ require_once(__DIR__ . '/../Facades/Route.php');
     color: rgb(255, 140, 0) !important;
   }
 </style>
-<nav class="navbar navbar-expand-lg bg-light shadow-lg">
+<nav class="navbar navbar-expand-lg fixed-top bg-light shadow-lg">
   <div class="container">
     <a class="navbar-brand" href="index.php">
       <strong>Pantau Api</strong>
@@ -35,7 +35,7 @@ require_once(__DIR__ . '/../Facades/Route.php');
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="index.php#portfolio">About Us</a>
+          <a class="nav-link" href="#portfolio">About Us</a>
         </li>
 
         <li class="nav-item">
