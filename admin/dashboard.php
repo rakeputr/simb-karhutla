@@ -4,12 +4,18 @@ session_start();
 
 require_once (__DIR__ . '/../src/Facades/Route.php');
 require_once (__DIR__ . '/../src/Facades/FlashSession.php');
-require_once (__DIR__ . '/../src/Facades/AdminAuth.php');
+require_once (__DIR__ . '/../src/Facades/authentication.php');
 require_once (__DIR__ . '/../src/Repositories/UserAdminRepositoryImpl.php');
 require_once (__DIR__ . '/../src/Repositories/InformationRepositoryImpl.php');
 
-if (!AdminAuth::isLogged()) {
-    Route::redirect('admin/');
+if (!isLogged()) {
+  header("Location: ../login.php?message=login_admin");
+  exit();
+} else {
+  if (!isAdmin()) {
+    header("Location: ../index.php?message=not_admin");
+    exit();
+  }
 }
 
 $informationRepository = new InformationRepositoryImpl();
