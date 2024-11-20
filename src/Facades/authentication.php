@@ -7,71 +7,82 @@ function register($formData)
 {
     $connection = Connection::getInstance();
 
-  $name = $formData["name"];
-  $username = strtolower(stripslashes($formData["username"]));
-  $email = strtolower($formData["email"]);
-  $password = mysqli_real_escape_string($connection, $formData["password"]);
-  $confirmpassword = mysqli_real_escape_string($connection, $formData["confirmpassword"]);
+    $name = $formData["name"];
+    $username = strtolower(stripslashes($formData["username"]));
+    $email = strtolower($formData["email"]);
+    $password = $formData["password"];
+    $confirmpassword = $formData["confirmpassword"];
 
-  // cek udah ada yg make belom usernamenya
-  $result = $connection->query("SELECT username FROM user WHERE username = '$username'");
-  if ($result->fetch_assoc()) {
-    echo "<script>
-    alert('Login gagal. Username tidak tersedia.');
-    </script>";
-    return false;
-  }
+    // cek udah ada yg make belom usernamenya
+    $stmt = $connection->prepare("SELECT username FROM user WHERE username = :username");
+    $stmt->execute(['username' => $username]);
+    if ($stmt->fetch()) {
+        echo "<script>
+        alert('Login gagal. Username tidak tersedia.');
+        </script>";
+        return false;
+    }
 
-  // kalo password & confirm nggak sama
-  if ($password != $confirmpassword) {
-    echo "<script>
-    alert('Login gagal. Password salah!');
-    </script>";
-    return false;
-  }
+    // kalo password & confirm nggak sama
+    if ($password != $confirmpassword) {
+        echo "<script>
+        alert('Login gagal. Password salah!');
+        </script>";
+        return false;
+    }
 
-  // enkripsi password pake password hash
-  $password = password_hash($password, PASSWORD_DEFAULT);
+    // enkripsi password pake password hash
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-  $connection->query("INSERT INTO user VALUES (null, '$username', '$name', '$email', '$password', 0)");
+    // Masukkan data ke database
+    $stmt = $connection->prepare(
+        "INSERT INTO user (username, name, email, password, is_admin) VALUES (:username, :name, :email, :password, :is_admin)"
+    );
+    $stmt->execute([
+        'username' => $username,
+        'name' => $name,
+        'email' => $email,
+        'password' => $hashedPassword,
+        'is_admin' => 0, // Default role
+    ]);
 
-  return ($connection->affected_rows) ? true : false;
+    return $stmt->rowCount() > 0;
 }
+
 
 function loginAttempt($formData)
 {
-  // ob_start();
-  $connection = Connection::getInstance();
+    $connection = Connection::getInstance();
 
-  $username = strtolower($formData["username"]);
-  $password = $formData["password"];
+    $username = strtolower($formData["username"]);
+    $password = $formData["password"];
 
-  $result = $connection->query("SELECT * FROM user WHERE username='$username'");
+    $stmt = $connection->prepare("SELECT * FROM user WHERE username = :username");
+    $stmt->execute(['username' => $username]);
 
-  // kalo username gk ditemuin gaiso login
-  if ($result->num_rows !== 1) {
-    $messageError = 'Login gagal. Username tidak ditemukan.';
-    echo "<script>alert('" . addslashes($messageError) . "');</script>";
-    ob_end_flush();
-    return false;
-  }
+    // Hitung jumlah hasil query
+    $userData = $stmt->fetch(PDO::FETCH_OBJ);
+    if (!$userData) {
+        $messageError = 'Login gagal. Username tidak ditemukan.';
+        echo "<script>alert('" . addslashes($messageError) . "');</script>";
+        return false;
+    }
 
-  $userData = $result->fetch_object();
+    // Verifikasi password
+    if (!password_verify($password, $userData->password)) {
+        $message = 'Login gagal. Password salah.';
+        echo "<script>alert('" . addslashes($message) . "');</script>";
+        return false;
+    }
 
-  // password salah gaiso login juga
-  if (!password_verify($password, $userData->password)) {
-    $message = 'Login gagal. Password salah.';
-    echo "<script>alert('" . addslashes($message) . "');</script>";
-    ob_end_flush();
-    return false;
-  }
+    // Simpan informasi user ke session
+    $_SESSION['id'] = $userData->id;
+    $_SESSION['username'] = $userData->username;
+    $_SESSION['login'] = true;
 
-  $_SESSION['id'] = $userData->id;
-  $_SESSION['username'] = $userData->username;
-  $_SESSION['login'] = true;
-
-  return true;
+    return true;
 }
+
 
 
 function isLogged()
@@ -96,7 +107,7 @@ function isAdmin()
         $userData = $result->fetch(PDO::FETCH_OBJ);
 
         // Periksa apakah user adalah admin
-        if ($userData && $userData->is_admin === "1") {
+        if ($userData && $userData->is_admin === 1) {
             return true;
         }
     }
