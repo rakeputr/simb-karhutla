@@ -32,7 +32,7 @@
 
 <body data-aos-easing="ease" data-aos-duration="500" data-aos-delay="0" style="overflow: visible; height: initial;" class="fp-responsive fp-viewing-tata-kelola-gambut-indonesia" data-new-gr-c-s-check-loaded="14.1088.0" data-gr-ext-installed="">
     
-<?php include (__DIR__ . '/src/Templates/navbar.php') ?>
+<?php include (__DIR__ . '/src/Templates/navbar gtk.php') ?>
 
     <div id="Content">
              <section id="pelajari-index">
