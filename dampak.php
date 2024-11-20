@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="https://pantaugambut.id/css/jquery.rs.carousel.css">
 </head> -->
 
-<?php include(__DIR__ . '\src\Templates\head buat gtk.php'); ?>
+<?php include(__DIR__ . '/src/Templates/head_gtk.php'); ?>
 
 <body>
 
