@@ -141,7 +141,7 @@
                             <span class="d-block" data-aos="zoom-in">Berita Selanjutnya</span>
 
                             <h3 class="news-title" data-aos="fade-up">
-                                <a href="news-detail.html" class="news-title-link">Kebakaran Hutan dan Lahan Marak Terjadi, Berikut Cara Pencegahannya!</a>
+                                <a href="news-detail.php" class="news-title-link">Kebakaran Hutan dan Lahan Marak Terjadi, Berikut Cara Pencegahannya!</a>
                             </h3>
                         </div>
 

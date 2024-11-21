@@ -269,7 +269,7 @@ strong {
 .navbar-nav .nav-item.active .nav-link,
 .nav-link:focus, 
 .nav-link:hover {
-  color: var(--white-color);
+  color: rgb(255, 140, 0);
 }
 
 .nav-link:focus {

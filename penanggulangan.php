@@ -29,9 +29,13 @@
     <link rel="stylesheet" type="text/css" href="https://pantaugambut.id/css/jquery.rs.carousel.css">
 </head> -->
 
-<?php include(__DIR__ . '\src\Templates\header.php'); ?>
+<?php include(__DIR__ . '/src/Templates/head_gtk.php'); ?>
 
 <body>
+
+<?php include (__DIR__ . '/src/Templates/navbar.php') ?>
+
+
     <!-- <header>
         <nav class="navbar navbar-expand-lg align-items-md-center align-items-lg-start">
             <a class="navbar-brand" href="https://pantaugambut.id">

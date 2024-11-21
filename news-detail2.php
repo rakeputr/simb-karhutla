@@ -131,7 +131,7 @@
                             <span class="d-block" data-aos="zoom-in">Berita Selanjutnya</span>
 
                             <h3 class="news-title" data-aos="fade-up">
-                                <a href="news-detail3.html" class="news-title-link">Karhutla 2021, KLHK Mulai Langkah Pencegahan dan Penanganan</a>
+                                <a href="news-detail3.php" class="news-title-link">Karhutla 2021, KLHK Mulai Langkah Pencegahan dan Penanganan</a>
                             </h3>
                         </div>
 

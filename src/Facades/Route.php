@@ -10,6 +10,6 @@ class Route
 
     public static function createUrl(string $page): string
     {
-        return 'http://localhost/simb-karhutla/' . $page;
+        return 'http://localhost:8000/' . $page;
     }
 }

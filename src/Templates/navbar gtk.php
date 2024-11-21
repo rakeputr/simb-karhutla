@@ -7,7 +7,7 @@ require_once(__DIR__ . '/../Facades/Route.php');
     color: rgb(255, 140, 0) !important;
   }
 </style>
-<nav class="navbar navbar-expand-lg bg-light shadow-lg">
+<nav class="navbar navbar-expand-lg fixed-top bg-light shadow-lg">
   <div class="container">
     <a class="navbar-brand" href="index.php">
       <strong>Pantau Api</strong>

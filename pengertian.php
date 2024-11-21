@@ -1,123 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Pengertian</title>
 
-    <style >[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid] {display: none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Poppins:wght@400;500;700&display=swap"
-          as="style"
-          onload="this.onload=null;this.rel='stylesheet'"
-    >
-    <noscript>
-        <link
-                href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Poppins:wght@400;500;700&display=swap"
-                rel="stylesheet"
-                type="text/css"
-        />
-    </noscript>
+<?php include(__DIR__ . '/src/Templates/head_gtk.php'); ?>
 
-    <link rel="stylesheet" type="text/css" href="https://pantaugambut.id/css/bootstrap.css?id=33252b3bead066e1b66d">
-    <link rel="stylesheet" type="text/css" href="https://pantaugambut.id/css/default.css?id=aed78a0e6c2e2253aa11">
-    <link rel="stylesheet" type="text/css" href="https://pantaugambut.id/css/jquery.rs.carousel.css">
-</head> -->
-
-<?php include(__DIR__ . '\src\Templates\header.php'); ?>
 <body>
-    <!-- <header>
-        <nav class="navbar navbar-expand-lg align-items-md-center align-items-lg-start">
-            <a class="navbar-brand" href="https://pantaugambut.id">
-                <div class="img"></div>
-                <div class="text">pantau gambut</div>
-            </a>
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="icon-bar top-bar"></span>
-                <span class="icon-bar middle-bar"></span>
-                <span class="icon-bar bottom-bar"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar">
-                <ul class="navbar-nav mr-auto">
-                    <li class="search-link d-block d-lg-none">
-                        <a href="https://pantaugambut.id/search">Apa itu gambut</a>
-                    </li>
-                                    
-                        <li class="nav-item ">
-                            <a class="nav-link" href="https://pantaugambut.id/kabar" target="_self">
-                                
-                                    <i class="pelajari lazyload" data-bg="https://pantaugambut.id/storage/navigations/pg-icon-kabar-at-2x-NsQVB.svg"></i>
-                                                            Kabar Gambut
-                            </a>
-                        </li>
-                                    
-                        <li class="nav-item active">
-                            <a class="nav-link" href="https://pantaugambut.id/pelajari" target="_self">
-                                
-                                    <i class="pelajari lazyload" data-bg="https://pantaugambut.id/storage/navigations/pg-icon-pelajari-at-2x-eAHii.svg"></i>
-                                                            Pelajari
-                            </a>
-                        </li>
-                                    
-                        <li class="nav-item ">
-                            <a class="nav-link" href="https://pantaugambut.id/peta-gambut" target="_self">
-                                
-                                    <i class="pelajari lazyload" data-bg="https://pantaugambut.id/storage/navigations/peta-restorasi-ng9zE.svg"></i>
-                                                            Peta Gambut
-                            </a>
-                        </li>
-                                    
-                        <li class="nav-item ">
-                            <a class="nav-link" href="https://pantaugambut.id/pantau-komitmen" target="_self">
-                                
-                                    <i class="pelajari lazyload" data-bg="https://pantaugambut.id/storage/navigations/pg-icon-komitmen-at-2x-yuuN3.svg"></i>
-                                                            Pantau Komitmen
-                            </a>
-                        </li>
-                                    
-                        <li class="nav-item ">
-                            <a class="nav-link" href="https://pantaugambut.id/publikasi" target="_self">
-                                
-                                    <i class="pelajari lazyload" data-bg="https://pantaugambut.id/storage/navigations/icon-5Cq3J.svg"></i>
-                                                            Publikasi
-                            </a>
-                        </li>
-                                    
-                        <li class="nav-item ">
-                            <a class="nav-link" href="https://pantaugambut.id/staf" target="_self">
-                                
-                                    <i class="pelajari lazyload" data-bg="https://pantaugambut.id/storage/navigations/pg-icon-staf-XaVpH.svg"></i>
-                                                            Staf
-                            </a>
-                        </li>
-                                </ul>
-                
-                <div class="my-2 my-lg-0 form-inline">
-                    <form class="form-inline search d-none d-lg-block">
-                        <a href="https://pantaugambut.id/search" class="search-btn">search</a>
-                    </form>
-                    <form class="form-inline">
-                        <div class="d-block d-lg-none mobile-lang">
-                                <a href="https://pantaugambut.id/lang/id/knowledge" class="active">INA</a><a href="https://pantaugambut.id/lang/en/knowledge" >ENG</a>
-                        </div>
-                        <div id="ChangeLang" class="custom-select d-none d-lg-block">
-                            <select>
-                                <option value="0">-</option>
-                                <option value="https://pantaugambut.id/lang/id/knowledge" selected="selected">INA</option>
-                                <option value="https://pantaugambut.id/lang/en/knowledge" >ENG</option>
-                            </select>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </header>
- -->
+
+<?php include (__DIR__ . '/src/Templates/navbar gtk.php') ?>
+
    <div id="Content">
     <section id="pelajari-nav" class="d-none d-md-block">
    <div class="nav carousel">
@@ -156,7 +46,7 @@
    <label class="category">Kebakaran Hutan &amp; Lahan</label>
    <h1 class="with-line"><span>Pengertian</span></h1>
    <div class="lead mb-0">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In magna felis, cursus ut maximus nec, posuere eget orci. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus eget tellus luctus, placerat purus ac, bibendum sapien. Nulla quam ipsum, fringilla et iaculis id, luctus non arcu. </p>
+    <p>Kebakaran Hutan dan Lahan bisa disebut juga sebagai peristiwa terbakarnya vegetasi di kawasan hutan atau lahan, yang bisa terjadi secara alami atau akibat aktivitas manusia, yang mengakibatkan kerusakan lingkungan yang parah serta menimbulkan kerugian dalam aspek ekologi, ekonomi, sosial, dan politik. </p>
 </div>
 </div>
 
@@ -176,9 +66,13 @@
     <div class="k-widget text-based text">
         <div class="container" >
             <div class="W730">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In magna felis, cursus ut maximus nec, posuere eget orci. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus eget tellus luctus, placerat purus ac, bibendum sapien. Nulla quam ipsum, fringilla et iaculis id, luctus non arcu. Mauris non ullamcorper metus. Sed nec enim sem. Proin egestas aliquet rhoncus. Donec ac pulvinar nulla. Etiam finibus elit non erat rhoncus lacinia. </p>
+                    <p>
+                        Kebakaran hutan dan lahan (karhutla) di Indonesia disebabkan oleh beberapa faktor utama, baik alamiah maupun aktivitas manusia. Salah satu penyebab utamanya adalah kegiatan pembukaan lahan dengan metode pembakaran, terutama di kawasan hutan gambut yang kaya akan bahan organik. Praktik ini dianggap cepat dan murah, tetapi dampaknya sangat merusak lingkungan, menyebabkan kebakaran yang sulit dipadamkan. Selain itu, musim kemarau panjang yang diperparah oleh fenomena El Niño juga turut memperbesar risiko karhutla, karena kondisi tanah menjadi sangat kering dan mudah terbakar. 
+                    </p>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In magna felis, cursus ut maximus nec, posuere eget orci. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus eget tellus luctus, placerat purus ac, bibendum sapien. Nulla quam ipsum, fringilla et iaculis id, luctus non arcu. Mauris non ullamcorper metus. Sed nec enim sem. Proin egestas aliquet rhoncus. Donec ac pulvinar nulla. Etiam finibus elit non erat rhoncus lacinia. </p>
+                    <p>
+                    Di sisi lain, lemahnya pengawasan dan penegakan hukum terhadap pembukaan lahan secara ilegal juga menjadi penyebab maraknya karhutla. Beberapa perusahaan atau pihak tertentu sengaja melakukan pembakaran hutan untuk menghemat biaya dalam pembukaan perkebunan baru, seperti sawit dan karet. Kurangnya kesadaran masyarakat akan dampak negatif karhutla juga memperparah kondisi ini. Kebakaran yang terjadi berdampak pada kesehatan, ekonomi, dan lingkungan, serta menyebarkan polusi udara hingga ke negara-negara tetangga. Pencegahan dan pengendalian karhutla membutuhkan kerja sama semua pihak, mulai dari pemerintah, masyarakat, hingga sektor swasta.
+                    </p>
             </div>
         </div>
     </div> 
@@ -187,14 +81,6 @@
     <section class="related-knowledge">
        <div class="container c-100">
            <div class="d-flex justify-content-md-between">
-                <!-- <div class="link-area">
-                    <a href="https://pantaugambut.id/pelajari/pengendalian">
-                        <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-4-FVXdZ.png" alt="">
-                        <div class="text with-line">
-                            <span>Pengendalian</span>
-                        </div>
-                    </a>
-                </div> -->
                 <div class="link-area">
                     <div class="lead mb-0">
                         <p>Selanjutnya</p>

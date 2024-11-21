@@ -7,7 +7,7 @@ class Connection
     public static function getInstance(): \PDO
     {
         $host = 'localhost';
-        $dbname = 'simb';
+        $dbname = 'simb-karhutla';
         $username = 'root';
         $password = '';
 
