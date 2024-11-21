@@ -189,6 +189,17 @@
                         1.Pengelolaan Berkala
                     </p>
             </div>
+                        <section class="pg-widget default-gap image-based full-picture-horizontal">
+                <div class="container c-100" >
+                    <div class="w910">
+                        <div class="img with-ornament">
+                            <img src="images\mitigasi\pengelolaan.jpg"
+                                alt="alt optional"/>
+                            <div class="caption">caption</div>
+                        </div>
+                    </div>
+                </div> 
+</section> 
             <br>
                     <p>Pengelolaan berkala dilakukan dengan cara konservasi lahan basah agar tidak menjadi lahan kritis, lalu membuat sistem irigasi di sekitar daerah rawan kebakaran agar air dapat diatur secara efektif, lalu pemberian kapur pertanian seperti kaptan dan dolomit kepada tanah agar pH tanah menjadi netral </p>
                     <br>
@@ -197,24 +208,39 @@
                         2.Penegakan Hukum
                     </p>
             </div>
-            <br>
+            <section class="pg-widget default-gap image-based full-picture-horizontal">
+                <div class="container c-100" >
+                    <div class="w910">
+                        <div class="img with-ornament">
+                            <img src="images/mitigasi/peraturan.jpg"
+                                alt="alt optional"/>
+                            <div class="caption">caption</div>
+                        </div>
+                    </div>
+                </div> 
                     <p>
-                        Berdasarkan Undang-Undang Dasar Republik Indonesia No. 41 Tahun 1999 Tentang Kehutanan pasal 3
-                        Penyelenggaraan kehutanan bertujuan untuk sebesar-besar kemakmuran rakyat yang berkeadilan dan berkelanjutan dengan:</p>
-                            <ul>
-                                <li>Menjamin keberadaan hutan dengan luasan yang cukup dan sebaran yang proporsional;</li>
-                                <li>Mengoptimalkan aneka fungsi hutan yang meliputi fungsi konservasi, fungsi lindung, dan fungsi produksi untuk mencapai manfaat lingkungan, sosial, budaya, dan ekonomi, yang seimbang dan lestari;</li>
-                                <li>Meningkatkan daya dukung daerah aliran sungai;</li>
-                                <li>Meningkatkan kemampuan untuk mengembangkan kapasitas dan keberdayaan masyarakat secara partisipatif, berkeadilan, dan berwawasan lingkungan sehingga mampu menciptakan ketahanan sosial dan ekonomi serta ketahanan terhadap akibat perubahan eksternal; dan</li>
-                                <li>Menjamin distribusi manfaat yang berkeadilan dan berkelanjutan.</li>
-                            </ul>                        
+                        peraturan tersebut merupakan landasan hukum yang mengatur penyelenggaraan kehutanan di Indonesia. Undang-undang ini dirancang untuk memastikan pemanfaatan hutan secara bijaksana, berkelanjutan, dan adil demi kepentingan rakyat, lingkungan, dan pembangunan negara. Di dalamnya diatur berbagai aspek pengelolaan hutan, mulai dari pelestarian, perlindungan, hingga produksi hutan, serta tata cara pemanfaatan sumber daya hutan agar dapat memberikan manfaat jangka panjang bagi seluruh masyarakat Indonesia.
+                    </p>
+                    <p>
+                    Pada Pasal 3, tujuan utama dari pengelolaan kehutanan adalah untuk mencapai kesejahteraan rakyat. Ini mencakup pemanfaatan hutan dengan tetap menjaga keseimbangan antara fungsi ekologis, sosial, dan ekonomi. UU ini juga menekankan pentingnya keberadaan hutan dalam jumlah yang memadai dan tersebar secara merata, guna menjaga fungsi ekologisnya, seperti menjaga kualitas air, udara, dan tanah. Selain itu, undang-undang ini mengatur distribusi manfaat yang dihasilkan dari hutan agar dapat dinikmati secara merata dan berkeadilan oleh masyarakat, serta meningkatkan kapasitas masyarakat dalam mengelola hutan secara berkelanjutan, sehingga ketahanan sosial, ekonomi, dan lingkungan dapat terjaga.
+                    </p> 
+                    
                     <br>
             <div class="lead mb-0">
                      <p>
                         3. Edukasi masyarakat
                     </p>
             </div>
-            <br>
+            <section class="pg-widget default-gap image-based full-picture-horizontal">
+                <div class="container c-100" >
+                    <div class="w910">
+                        <div class="img with-ornament">
+                            <img src="images\mitigasi\edukasi.png"
+                                alt="alt optional"/>
+                            <div class="caption">caption</div>
+                        </div>
+                    </div>
+                </div>
                     <p>
                     Meningkatkan kesadaran masyarakat tentang pentingnya menjaga lingkungan dan bahaya dari kebakaran hutan melalui edukasi dan kampanye sosialisasi. Informasi tentang cara-cara pencegahan kebakaran harus mudah diakses oleh masyarakat.
                     </p>
