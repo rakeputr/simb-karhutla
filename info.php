@@ -3,26 +3,63 @@
 session_start();
 
 require_once (__DIR__ . '/src/Facades/Route.php');
-require_once (__DIR__ . '/src/Facades/Auth.php');
-require_once (__DIR__ . '/src/Repositories/InformationRepositoryImpl.php');
+require_once (__DIR__ . '/src/Facades/authentication.php');
 require_once (__DIR__ . '/src/Facades/Connection.php');
 
-$informationRepository = new InformationRepositoryImpl();
 
-if (strtoupper($_SERVER['REQUEST_METHOD']) == 'POST') {
-    if (!Auth::isLogged()) {
-        Route::redirect('info.php');
+// Cek apakah data dikirim melalui POST
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    try {
+        // Ambil data dari form
+        $tanggal = $_POST['tanggal'];
+        $tempat = $_POST['tempat'];
+        $provinsi = $_POST['provinsi'];
+        $koordinat = $_POST['koordinat'];
+        $kronologi = $_POST['kronologi'];
+        $status = $_POST['status'] === 'Active' ? 1 : 0; // Konversi status ke 1/0
+        $user_id = getLoggedUser()->id; // Pastikan user yang sedang login memiliki ID di session
+
+        // Validasi input (opsional, tambahkan sesuai kebutuhan)
+        if (empty($tanggal) || empty($tempat) || empty($provinsi) || empty($kronologi)) {
+            throw new Exception("Semua kolom wajib diisi!");
+        }
+
+        // Siapkan koneksi database
+        $connection = Connection::getInstance();
+
+        // Siapkan query untuk insert data
+        $stmt = $connection->prepare("
+            INSERT INTO information (tgl_kejadian, created_at, tempat, provinsi, koordinat, kronologi, status, user_id) 
+            VALUES (:tanggal, NOW(), :tempat, :provinsi, :koordinat, :kronologi, :status, :user_id)
+        ");
+
+        // Bind parameter ke query
+        $stmt->execute([
+            'tanggal' => $tanggal,
+            'tempat' => $tempat,
+            'provinsi' => $provinsi,
+            'koordinat' => $koordinat,
+            'kronologi' => $kronologi,
+            'status' => $status,
+            'user_id' => $user_id
+        ]);
+
+        // Redirect atau tampilkan pesan sukses
+        echo "<script>
+            alert('Data berhasil disimpan!');
+            window.location.href = 'info.php'; // Ubah ke halaman form atau daftar data
+        </script>";
+    } catch (Exception $e) {
+        // Tangani error
+        echo "<script>
+            alert('Terjadi kesalahan: " . addslashes($e->getMessage()) . "');
+            window.history.back();
+        </script>";
     }
+} 
 
-    $user_id = Auth::getLoggedUser()->id;
-    $dateOccured = $_REQUEST['date_occured'];
-    $place = $_REQUEST['place'];
-    $chronology = $_REQUEST['chronology'];
 
-    $informationRepository->insert($user_id, $dateOccured, $place, $chronology);
 
-    Route::redirect('info.php');
-}
 
 // Fetch data from database
 try {
@@ -41,6 +78,7 @@ try {
           user u 
       ON 
           i.user_id = u.id
+      WHERE i.verified_at IS NOT NULL
   ";
 
   // Eksekusi query

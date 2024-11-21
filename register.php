@@ -81,12 +81,12 @@ if (isLogged()) {
                     <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
                     <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" required>
                   </div>
-                  <!-- <a href="./index.html" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Sign Up</a> -->
+                  <!-- <a href="./index.php" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Sign Up</a> -->
                   <button type="submit" name="register" id="register" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Sign Up</button>
       
                   <div class="d-flex align-items-center justify-content-center">
                     <p class="fs-4 mb-0 fw-bold">Already have an Account?</p>
-                    <a class="text-primary fw-bold ms-2" href="./authentication-login.html">Sign In</a>
+                    <a class="text-primary fw-bold ms-2" href="login.php">Sign In</a>
                   </div>
                 </form>
               </div>
