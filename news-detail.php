@@ -6,7 +6,7 @@ if (isset($_GET["id"])) {
     $id = $_GET["id"];
   } else {
       echo "<script>
-          alert('Pilih salah berita terlebih dahulu!');
+          alert('Pilih salah satu berita terlebih dahulu!');
           window.location.href = 'news.php'; 
       </script>";
 }
