@@ -4,39 +4,37 @@
 
 <body>
 
-<?php include (__DIR__ . '/src/Templates/navbar.php') ?>
+<?php include (__DIR__ . '/src/Templates/navbar gtk.php') ?>
 
-   <div id="Content">
-    <section id="pelajari-nav" class="d-none d-md-block">
-   <div class="nav carousel">
-       <ul>
-            <li>
-                <a href="pengertian.php">
-                    <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-1-DuhWD.png">
-                    <span>Pengertian</span>
-                </a>
-            </li>
-            <li>
-                <a href="mitigasi.php">
-                    <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-5-BA2OU.png">
-                    <span>Mitigasi</span>
-                </a>
-            </li>
-            <li> 
-                <a href="dampak.php">
-                    <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-3-8ZJjo.png">
-                    <span>Dampak</span>
-                </a>
-            </li>
-            <li>
-                <a href="penanggulangan.php">
-                    <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-4-FVXdZ.png">
-                    <span>Penanggulangan</span>
-                </a>
-            </li>
-        </ul>
-   </div>
+<div id="Content">
+<hr id="hr1">
+    <section id="bar">
+        <a href="pengertian.php">
+            <div>
+                <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-1-DuhWD.png" alt="Pengertian">
+                <span>Pengertian</span>
+            </div>
+        </a>
+        <a href="mitigasi.php">
+            <div>
+                <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-5-BA2OU.png" alt="Mitigasi">
+                <span>Mitigasi</span>
+            </div>
+        </a>
+        <a href="dampak.php">
+            <div>
+                <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-3-8ZJjo.png" alt="Dampak">
+                <span>Dampak</span>
+            </div>
+        </a>
+        <a href="penanggulangan.php">
+            <div>
+                <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-4-FVXdZ.png" alt="Penanggulangan">
+                <span>Penanggulangan</span>
+            </div>
+        </a>
     </section>
+    <hr id="hr2">
 
     <section id="pelajari-detail">
    <a href="gtk.php" class="back">Kembali</a>
@@ -80,7 +78,7 @@
                     <a href="#">
                         <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/.png" alt="">
                         <div class="text with-line">
-                            <span>GTW</span>
+                            <span>Get to Know</span>
                         </div>
                     </a>
                 </div>
