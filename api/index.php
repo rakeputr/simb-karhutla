@@ -11,7 +11,7 @@ $app = new Application();
 
 $route = $app->getRoute();
 
-$route->get("api/statistik-kebakaran", function() use($app) {
+$route->get("simb-karhutla/api/statistik-kebakaran", function() use($app) {
     $connection = Farhanisty\Vetran\Facades\Connection\Connection::getInstance();
 
     //bikin o queryne disini

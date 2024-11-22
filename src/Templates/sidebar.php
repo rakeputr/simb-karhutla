@@ -15,13 +15,13 @@
                     <ul class="menu">
                         <li class="sidebar-title">Menu</li>
                         <li class="sidebar-item <?= ($title == "Dashboard") ? "active" : ""; ?>">
-                            <a href="dashboard.php" class='sidebar-link'>
+                            <a href="<?= Route::createUrl('admin/dashboard.php')?>" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>Dashboard</span>
                             </a>
                         </li>
                         <li class="sidebar-item <?= ($title == "Pelaporan") ? "active" : ""; ?>">
-                            <a href="unverified.php" class='sidebar-link'>
+                            <a href="<?= Route::createUrl('admin/unverified.php')?>" class='sidebar-link'>
                                 <i class="bi bi-file-earmark-spreadsheet-fill"></i>
                                 <span>Approve Pelaporan</span>
                             </a>
@@ -33,10 +33,10 @@
                             </a>
                             <ul class="submenu active">
                                 <li class=" <?= ($title == "Monitoring Berita") ? "submenu-item active" : "submenu-item"; ?>">
-                                    <a href="news.php">Monitoring Berita</a>
+                                    <a href="<?= Route::createUrl('admin/news.php')?>">Monitoring Berita</a>
                                 </li>
                                 <li class=" <?= ($title == "Tulis Berita") ? "submenu-item active" : "submenu-item"; ?>">
-                                    <a href="create-news.php">Tulis Berita</a>
+                                    <a href="<?= Route::createUrl('admin/create-news.php')?>">Tulis Berita</a>
                                 </li>
                             </ul>
                         </li>

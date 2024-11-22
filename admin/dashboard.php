@@ -60,16 +60,16 @@ $title = "Dashboard";
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/../admin_assets/css/bootstrap.css">
+    <link rel="stylesheet" href="<?= Route::createUrl('admin_assets/css/bootstrap.css')?>">
 
-    <link rel="stylesheet" href="/../admin_assets/vendors/simple-datatables/style.css" />
+    <link rel="stylesheet" href="<?= Route::createUrl('admin_assets/vendors/simple-datatables/style.css')?>" />
 
-    <link rel="stylesheet" href="/../admin_assets/vendors/iconly/bold.css">
+    <link rel="stylesheet" href="<?= Route::createUrl('admin_assets/vendors/iconly/bold.css')?>">
 
-    <link rel="stylesheet" href="/../admin_assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
-    <link rel="stylesheet" href="/../admin_assets/vendors/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" href="/../admin_assets/css/app.css">
-    <link rel="shortcut icon" href="/../admin_assets/images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="<?= Route::createUrl('admin_assets/vendors/perfect-scrollbar/perfect-scrollbar.css')?>">
+    <link rel="stylesheet" href="<?= Route::createUrl('admin_assets/vendors/bootstrap-icons/bootstrap-icons.css')?>">
+    <link rel="stylesheet" href="<?= Route::createUrl('admin_assets/css/app.css')?>">
+    <link rel="shortcut icon" href="<?= Route::createUrl('admin_assets/images/favicon.svg')?>" type="image/x-icon">
 </head>
 
 <body>
@@ -436,14 +436,14 @@ $title = "Dashboard";
             </div>
         </div>
     </div>
-    <script src="/../admin_assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="/../admin_assets/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= Route::createUrl('admin_assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js')?>"></script>
+    <script src="<?= Route::createUrl('admin_assets/js/bootstrap.bundle.min.js')?>"></script>
 
-    <script src="/../admin_assets/vendors/apexcharts/apexcharts.js"></script>
-    <script src="/../admin_assets/js/pages/dashboard.js"></script>
+    <script src="<?= Route::createUrl('admin_assets/vendors/apexcharts/apexcharts.js')?>"></script>
+    <script src="<?= Route::createUrl('admin_assets/js/pages/dashboard.js')?>"></script>
 
-    <script src="/../admin_assets/js/main.js"></script>
-    <script src="/../admin_assets/vendors/simple-datatables/simple-datatables.js"></script>
+    <script src="<?= Route::createUrl('admin_assets/js/main.js')?>"></script>
+    <script src="<?= Route::createUrl('admin_assets/vendors/simple-datatables/simple-datatables.js')?>"></script>
     <script>
         let table1 = document.querySelector("#table1");
         let dataTable = new simpleDatatables.DataTable(table1, {

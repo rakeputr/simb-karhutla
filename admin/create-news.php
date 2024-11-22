@@ -3,6 +3,7 @@
 session_start();
 
 require_once (__DIR__ . '/../src/Facades/authentication.php'); 
+require_once (__DIR__ . '/../src/Facades/Route.php'); 
 
 if (!isLogged()) {
     header("Location: ../login.php?message=login_admin");
@@ -28,14 +29,14 @@ $title = "Tulis Berita";
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/../admin_assets/css/bootstrap.css">
+    <link rel="stylesheet" href="<?= Route::createUrl('admin_assets/css/bootstrap.css');?>">
 
-    <link rel="stylesheet" href="/../admin_assets/vendors/summernote/summernote-lite.min.css">
+    <link rel="stylesheet" href="<?= Route::createUrl('admin_assets/vendors/summernote/summernote-lite.min.css');?>">
 
-    <link rel="stylesheet" href="/../admin_assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
-    <link rel="stylesheet" href="/../admin_assets/vendors/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" href="/../admin_assets/css/app.css">
-    <link rel="shortcut icon" href="/../admin_assets/images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="<?= Route::createUrl('admin_assets/vendors/perfect-scrollbar/perfect-scrollbar.css');?>">
+    <link rel="stylesheet" href="<?= Route::createUrl('admin_assets/vendors/bootstrap-icons/bootstrap-icons.css');?>">
+    <link rel="stylesheet" href="<?= Route::createUrl('admin_assets/css/app.css');?>">
+    <link rel="shortcut icon" href="<?= Route::createUrl('admin_assets/images/favicon.svg');?>" type="image/x-icon">
 </head>
 
 <body>
@@ -150,11 +151,11 @@ $title = "Tulis Berita";
 
         </div>
     </div>
-    <script src="/../admin_assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="/../admin_assets/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= Route::createUrl('admin_assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js');?>"></script>
+    <script src="<?= Route::createUrl('admin_assets/js/bootstrap.bundle.min.js');?>"></script>
 
-    <script src="/../admin_assets/vendors/jquery/jquery.min.js"></script>
-    <script src="/../admin_assets/vendors/summernote/summernote-lite.min.js"></script>
+    <script src="<?= Route::createUrl('admin_assets/vendors/jquery/jquery.min.js');?>"></script>
+    <script src="<?= Route::createUrl('admin_assets/vendors/summernote/summernote-lite.min.js');?>"></script>
     <script>
         $('#summernote').summernote({
             tabsize: 2,
@@ -164,7 +165,7 @@ $title = "Tulis Berita";
 
     </script>
 
-    <script src="/../admin_assets/js/main.js"></script>
+    <script src="<?= Route::createUrl('admin_assets/js/main.js');?>"></script>
 </body>
 
 </html>
