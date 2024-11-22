@@ -1,3 +1,9 @@
+<?php 
+
+session_start();
+
+require_once (__DIR__ . '/../src/Facades/authentication.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,8 +38,8 @@
                 <div class="page-title">
                     <div class="row">
                         <div class="col-12 col-md-6 order-md-1 order-last">
-                            <h3>Summernote </h3>
-                            <p class="text-subtitle text-muted">Super simple WYSIWYG editor. But you must include jQuery
+                            <h3>Tulis Berita </h3>
+                            <p class="text-subtitle text-muted">Sampaikan berita terkini
                             </p>
                         </div>
                         <div class="col-12 col-md-6 order-md-2 order-first">
@@ -51,13 +57,62 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Default Editor</h4>
+                                    <h4 class="card-title">Form Tulis Berita</h4>
                                 </div>
                                 <div class="card-body">
-                                <form action="proses_simpan.php" method="POST">
-                        <textarea id="summernote" name="konten"></textarea>
-                        <button type="submit" class="btn btn-primary mt-3">Simpan</button>
-                    </form>
+                                <form action="/../src/Facades/NewsUpload.php" method="POST" enctype="multipart/form-data">
+    <div class="row">
+        <!-- Input Judul -->
+        <div class="col-md-6 col-12">
+            <div class="form-group">
+                <label for="judul">Judul</label>
+                <input type="text" id="judul" class="form-control" 
+                       placeholder="Tulis judul di sini" name="judul" required>
+            </div>
+        </div>
+
+        <!-- Input Tanggal Upload -->
+        <div class="col-md-6 col-12">
+            <div class="form-group">
+                <label for="tanggal">Tanggal Upload</label>
+                <input type="date" id="tanggal" class="form-control" 
+                       name="tanggal" required>
+            </div>
+        </div>
+
+        <!-- Input Picture -->
+        <div class="col-md-6 col-12">
+            <div class="form-group">
+                <label for="picture">Gambar</label>
+                <input type="file" id="picture" class="form-control" 
+                       name="picture" accept="image/*" required>
+            </div>
+        </div>
+
+        <!-- Input Penulis -->
+        <div class="col-md-6 col-12">
+            <div class="form-group">
+                <label for="penulis">Penulis</label>
+                <input type="text" id="penulis" class="form-control" 
+                       name="penulis" placeholder="Penulis" 
+                       value="<?= getLoggedUser()->name ?>">
+            </div>
+        </div>
+
+        <!-- Input Konten -->
+        <div class="form-group col-12">
+            <label for="konten">Konten</label>
+            <textarea id="summernote" name="konten"></textarea>
+        </div>
+
+        <!-- Submit dan Reset -->
+        <div class="col-12 d-flex justify-content-end mt-3">
+            <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
+            <button type="reset" class="btn btn-light-secondary me-1 mb-1">Reset</button>
+        </div>
+    </div>
+</form>
+
                                 </div>
                             </div>
                         </div>
