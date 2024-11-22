@@ -22,7 +22,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="unverived.php" class='sidebar-link'>
+                            <a href="unverified.php" class='sidebar-link'>
                                 <i class="bi bi-file-earmark-spreadsheet-fill"></i>
                                 <span>Approve Pelaporan</span>
                             </a>

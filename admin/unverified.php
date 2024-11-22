@@ -128,8 +128,8 @@ try {
                                             <?php endif; ?>
                                         </td>
                                         <td>
-                                           <a href="verified-post.php?id=<?=$row['id']?>" class="rounded-pill btn btn-success"> approve </a>
-                                            <button class="rounded-pill btn btn-danger">Hapus</button>
+                                          <a href="verified-post.php?id=<?=$row['id']?>" class="rounded-pill btn btn-success"> approve </a>
+                                          <a href="/../src/Facades/PelaporanDelete.php?reject=<?=$row['id']?>" class="rounded-pill btn btn-danger"> Hapus </a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

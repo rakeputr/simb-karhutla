@@ -208,7 +208,7 @@ try {
                                                   data-bs-toggle="modal" data-bs-target="#editStatusModal">
                                               Edit
                                           </button>
-                                            <button class="rounded-pill btn btn-danger">Hapus</button>
+                                          <a href="/../src/Facades/PelaporanDelete.php?id=<?=$row['id']?>" class="rounded-pill btn btn-danger"> Hapus </a>
                                         </div>
                                       </td>
                                     </tr>
