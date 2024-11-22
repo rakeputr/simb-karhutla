@@ -3,11 +3,8 @@
 session_start();
 
 require_once (__DIR__ . '/../src/Facades/Route.php');
-require_once (__DIR__ . '/../src/Facades/FlashSession.php');
 require_once (__DIR__ . '/../src/Facades/Connection.php');
 require_once (__DIR__ . '/../src/Facades/authentication.php');
-require_once (__DIR__ . '/../src/Repositories/UserAdminRepositoryImpl.php');
-require_once (__DIR__ . '/../src/Repositories/InformationRepositoryImpl.php');
 
 if (!isLogged()) {
     header("Location: ../login.php?message=login_admin");

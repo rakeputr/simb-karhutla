@@ -15,5 +15,5 @@ if ($_SESSION['is_admin'] == true) {
     Route::redirect('info.php');
 } else {
     Auth::logout();
-    Route::redirect('login.php');
+    Route::redirect('index.php');
 }

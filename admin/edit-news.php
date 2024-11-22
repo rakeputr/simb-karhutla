@@ -5,6 +5,17 @@ session_start();
 require_once (__DIR__ . '/../src/Facades/authentication.php'); 
 require_once (__DIR__ . '/../src/Facades/Connection.php'); 
 
+if (!isLogged()) {
+    header("Location: ../login.php?message=login_admin");
+    exit();
+  } else {
+    if (!isAdmin()) {
+      header("Location: ../index.php?message=not_admin");
+      exit();
+    }
+  }
+  
+
 if (isset($_GET["id"])) {
     $id = $_GET["id"];
   } else {
@@ -44,6 +55,8 @@ try {
 } catch (Exception $e) {
     echo "Error fetching data: " . $e->getMessage();
 }
+
+$title = "Berita";
 ?>
 
 
@@ -53,7 +66,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summernote - Mazer Admin Dashboard</title>
+    <title><?=$title?></title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">

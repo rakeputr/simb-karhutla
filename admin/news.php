@@ -1,5 +1,17 @@
 <?php
  require_once (__DIR__ . '/../src/Facades/Connection.php'); 
+ require_once (__DIR__ . '/../src/Facades/authentication.php'); 
+ 
+ if (!isLogged()) {
+    header("Location: ../login.php?message=login_admin");
+    exit();
+  } else {
+    if (!isAdmin()) {
+      header("Location: ../index.php?message=not_admin");
+      exit();
+    }
+  }
+  
 
 try {
     $pdo = Connection::getInstance();
@@ -18,13 +30,17 @@ try {
   } catch (Exception $e) {
     die('Error fetching data: ' . $e->getMessage());
   }
+
+  $title = "Monitoring Berita";
   
-?><!DOCTYPE html>
+?>
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DataTable - Mazer Admin Dashboard</title>
+    <title><?=$title?></title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -123,21 +139,6 @@ try {
             </div>
           </section>
         </div>
-
-        <footer>
-          <div class="footer clearfix mb-0 text-muted">
-            <div class="float-start">
-              <p>2021 &copy; Mazer</p>
-            </div>
-            <div class="float-end">
-              <p>
-                Crafted with
-                <span class="text-danger"><i class="bi bi-heart"></i></span> by
-                <a href="http://ahmadsaugi.com">A. Saugi</a>
-              </p>
-            </div>
-          </div>
-        </footer>
       </div>
     </div>
     <script src="/../admin_assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
