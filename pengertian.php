@@ -54,9 +54,7 @@
     <div class="container c-100" >
         <div class="w910">
             <div class="img with-ornament">
-                <img src="https://pantaugambut.id/images/original/widget/5-zn0du-resize-KClQb.jpg"
-                    alt="alt optional"/>
-                <div class="caption">caption</div>
+                <img src="https://pantaugambut.id/images/original/widget/5-zn0du-resize-KClQb.jpg"/>
             </div>
         </div>
     </div> 
