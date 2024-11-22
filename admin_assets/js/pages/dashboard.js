@@ -33,7 +33,7 @@ async function getStatistic() {
     plotOptions: {},
     series: [
       {
-        name: "sales",
+        name: "kebakaran",
         data: data,
       },
     ],
