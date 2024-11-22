@@ -14,34 +14,33 @@
                 <div class="sidebar-menu">
                     <ul class="menu">
                         <li class="sidebar-title">Menu</li>
-
-                        <li class="sidebar-item active ">
+                        <li class="sidebar-item <?= ($title == "Dashboard") ? "active" : ""; ?>">
                             <a href="dashboard.php" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>Dashboard</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
+                        <li class="sidebar-item <?= ($title == "Pelaporan") ? "active" : ""; ?>">
                             <a href="unverified.php" class='sidebar-link'>
                                 <i class="bi bi-file-earmark-spreadsheet-fill"></i>
                                 <span>Approve Pelaporan</span>
                             </a>
                         </li>
-                        <li class="sidebar-item  has-sub">
+                        <li class="sidebar-item has-sub <?= (strpos($title, "Berita") !== false) ? "active" : ""; ?>">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-collection-fill"></i>
                                 <span>Berita</span>
                             </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
+                            <ul class="submenu active">
+                                <li class=" <?= ($title == "Monitoring Berita") ? "submenu-item active" : "submenu-item"; ?>">
                                     <a href="news.php">Monitoring Berita</a>
                                 </li>
-                                <li class="submenu-item ">
+                                <li class=" <?= ($title == "Tulis Berita") ? "submenu-item active" : "submenu-item"; ?>">
                                     <a href="create-news.php">Tulis Berita</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="sidebar-item  has-sub">
+                        <!-- <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
                                 <span>Components</span>
@@ -370,7 +369,7 @@
                                 <i class="bi bi-cash"></i>
                                 <span>Donate</span>
                             </a>
-                        </li>
+                        </li> -->
 
                     </ul>
                 </div>

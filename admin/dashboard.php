@@ -47,6 +47,8 @@ try {
   die('Error fetching data: ' . $e->getMessage());
 }
 
+$title = "Dashboard";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +56,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Mazer Admin Dashboard</title>
+    <title><?=$title?></title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -160,7 +162,7 @@ try {
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>Profile Visit</h4>
+                                        <h4>Statistik Karhutla Indonesia Tahun 2024</h4>
                                     </div>
                                     <div class="card-body">
                                         <div id="chart-profile-visit"></div>
@@ -432,18 +434,6 @@ try {
                     </div>
                 </section>
             </div>
-
-            <footer>
-                <div class="footer clearfix mb-0 text-muted">
-                    <div class="float-start">
-                        <p>2021 &copy; Mazer</p>
-                    </div>
-                    <div class="float-end">
-                        <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
-                                href="http://ahmadsaugi.com">A. Saugi</a></p>
-                    </div>
-                </div>
-            </footer>
         </div>
     </div>
     <script src="/../admin_assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>

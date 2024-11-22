@@ -3,6 +3,17 @@ session_start();
 require_once (__DIR__ . '/../src/Facades/authentication.php'); 
 require_once (__DIR__ . '/../src/Facades/Connection.php'); 
 
+if (!isLogged()) {
+    header("Location: ../login.php?message=login_admin");
+    exit();
+  } else {
+    if (!isAdmin()) {
+      header("Location: ../index.php?message=not_admin");
+      exit();
+    }
+  }
+  
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Ambil data dari form
     $id = isset($_POST['id']) ? $_POST['id'] : '';

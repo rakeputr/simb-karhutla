@@ -30,7 +30,13 @@ if (isset($_GET['message'])) {
       alert('Silahkan login untuk mengakses halaman admin!')
     </script>
     <?php
-  }
+  } elseif ($_GET['message'] == "belum_login") {
+    ?>
+    <script>
+      alert('Silahkan login untuk membuat pelaporan!')
+    </script>
+    <?php
+  } 
 }
 ?>
 

@@ -1,5 +1,7 @@
 async function getStatistic() {
-  const response = await fetch("http://localhost:8000/api/statistik-kebakaran");
+  const response = await fetch(
+    "http://localhost/simb-karhutla/api/statistik-kebakaran"
+  );
 
   const results = await response.json();
 
