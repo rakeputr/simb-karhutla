@@ -23,6 +23,7 @@ try {
   // Query SQL
   $sql = "
       SELECT 
+      i.id,
           i.tgl_kejadian, 
           CONCAT(i.tempat, ', ', i.provinsi) AS lokasi, 
           i.kronologi, 
@@ -175,17 +176,18 @@ try {
                                     </div>
                                     <div class="card-body">
                                     <table class="table table-striped" id="table1">
-                  <thead>
-                    <tr>
-                      <th>Tanggal</th>
-                      <th>Tempat</th>
-                      <th>Kronologi</th>
-                      <th>Pelapor</th>
-                      <th>Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                  <?php foreach ($results as $row): ?>
+                                      <thead>
+                                        <tr>
+                                          <th>Tanggal</th>
+                                          <th>Tempat</th>
+                                          <th>Kronologi</th>
+                                          <th>Pelapor</th>
+                                          <th>Status</th>
+                                          <th>Action</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                      <?php foreach ($results as $row): ?>
                                     <tr>
                                         <td><?php echo htmlspecialchars($row['tgl_kejadian']); ?></td>
                                         <td><?php echo htmlspecialchars($row['lokasi']); ?></td>
@@ -198,14 +200,60 @@ try {
                                                 <span class="badge bg-danger">Inactive</span>
                                             <?php endif; ?>
                                         </td>
+                                        <td>
+                                        <div class="d-flex gap-2">
+                                          <button type="button" class="rounded-pill btn btn-info btn-edit-status"
+                                                  data-id="<?php echo $row['id']; ?>" 
+                                                  data-status="<?php echo $row['status']; ?>" 
+                                                  data-bs-toggle="modal" data-bs-target="#editStatusModal">
+                                              Edit
+                                          </button>
+                                            <button class="rounded-pill btn btn-danger">Hapus</button>
+                                        </div>
+                                      </td>
                                     </tr>
                                 <?php endforeach; ?>
-                  </tbody>
-                </table>
+                                    </tbody>
+                                  </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- start modal   -->
+                         <!-- Modal -->
+                        <div class="modal fade" id="editStatusModal" tabindex="-1" aria-labelledby="editStatusModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="editStatusModalLabel">Edit Status Berita</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <!-- Form untuk Edit Status -->
+                                <form action="edit-verified-post.php" method="POST">
+                                  <input type="number" name="id" id="newsId"> <!-- Menyimpan ID berita yang akan diubah -->
+                                
+                                  <!-- Dropdown untuk memilih status -->
+                                  <div class="form-group">
+                                    <label for="status">Pilih Status</label>
+                                    <select class="form-control" id="status" name="status" required>
+                                      <option value="1">Active</option>
+                                      <option value="0">Inactive</option>
+                                    </select>
+                                  </div>
+
+                                  <!-- Submit Button -->
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                    <button type="submit" class="btn btn-primary">Simpan</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                         <!-- end modal  -->
                         <div class="row">
                             <div class="col-12 col-xl-4">
                                 <div class="card">
@@ -413,6 +461,20 @@ try {
             fixedHeight: true,
         });
     </script>
+    <script>
+      // Event listener untuk mengisi ID berita dan status saat modal dibuka
+      document.querySelectorAll('.btn-edit-status').forEach(button => {
+        button.addEventListener('click', function() {
+          const newsId = this.getAttribute('data-id'); // Ambil ID berita dari data-id
+          const currentStatus = this.getAttribute('data-status'); // Ambil status saat ini dari data-status
+
+          // Isi ID berita dan status di modal
+          document.getElementById('newsId').value = newsId;
+          document.getElementById('status').value = currentStatus;
+        });
+      });
+    </script>
+
 </body>
 
 </html>

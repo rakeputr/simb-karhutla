@@ -27,13 +27,20 @@
                                 <span>Approve Pelaporan</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
-                            <a href="create-news.php" class='sidebar-link'>
-                                <i class="bi bi-file-earmark-spreadsheet-fill"></i>
-                                <span>Tulis Berita</span>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-collection-fill"></i>
+                                <span>Berita</span>
                             </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="news.php">Monitoring Berita</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="create-news.php">Tulis Berita</a>
+                                </li>
+                            </ul>
                         </li>
-
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>

@@ -6,18 +6,7 @@ try {
   
     // Query SQL
     $sql = "
-        SELECT 
-            i.tgl_kejadian, i.id,
-            CONCAT(i.tempat, ', ', i.provinsi) AS lokasi, 
-            i.kronologi, 
-            u.name, i.status
-        FROM 
-            information i 
-        JOIN 
-            user u 
-        ON 
-            i.user_id = u.id
-        WHERE i.verified_at is NULL;
+        SELECT * FROM news;
     ";
   
     // Eksekusi query
@@ -106,30 +95,25 @@ try {
                   <thead>
                     <tr>
                       <th>Tanggal</th>
-                      <th>Tempat</th>
-                      <th>Kronologi</th>
-                      <th>Pelapor</th>
-                      <th>Status</th>
+                      <th>Judul</th>
+                      <th>Isi Berita</th>
+                      <th>Penulis</th>
                       <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
                   <?php foreach ($results as $row): ?>
                                     <tr>
-                                        <td><?php echo htmlspecialchars($row['tgl_kejadian']); ?></td>
-                                        <td><?php echo htmlspecialchars($row['lokasi']); ?></td>
-                                        <td><?php echo htmlspecialchars($row['kronologi']); ?></td>
-                                        <td><?php echo htmlspecialchars($row['name']); ?></td>
+                                        <td><?php echo htmlspecialchars($row['tanggal']); ?></td>
+                                        <td><?php echo htmlspecialchars($row['title']); ?></td>
+                                        <td><?php echo htmlspecialchars(substr(strip_tags($row['contents']), 0, 100)) . '...'; ?></td>
+                                        <td><?php echo htmlspecialchars($row['penulis']); ?></td>
                                         <td>
-                                            <?php if ($row['status'] === 1): ?>
-                                                <span class="badge bg-success">Active</span>
-                                            <?php else: ?>
-                                                <span class="badge bg-danger">Inactive</span>
-                                            <?php endif; ?>
-                                        </td>
-                                        <td>
-                                           <a href="verified-post.php?id=<?=$row['id']?>" class="rounded-pill btn btn-success"> approve </a>
-                                            <button class="rounded-pill btn btn-danger">Hapus</button>
+                                        <div class="d-flex gap-2">
+                                            <a href="edit-news.php?id=<?=$row['id']?>" class="rounded-pill btn btn-info"> Edit </a>
+                                            <a href="/../src/Facades/NewsDelete.php?id=<?=$row['id']?>" class="rounded-pill btn btn-danger"> Hapus </a>
+                                            <!-- <button class="rounded-pill btn btn-danger">Hapus</button> -->
+                                        </div>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
