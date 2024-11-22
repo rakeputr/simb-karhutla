@@ -1,6 +1,10 @@
 <?php
+
+session_start();
+
  require_once (__DIR__ . '/../src/Facades/Connection.php'); 
  require_once (__DIR__ . '/../src/Facades/authentication.php'); 
+ require_once (__DIR__ . '/../src/Facades/Route.php');
  
  if (!isLogged()) {
     header("Location: ../login.php?message=login_admin");
@@ -56,22 +60,20 @@ try {
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/../admin_assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="<?= Route::createUrl('admin_assets/css/bootstrap.css')?>" />
 
-    <link rel="stylesheet" href="/../admin_assets/vendors/simple-datatables/style.css" />
+    <link rel="stylesheet" href="<?= Route::createUrl('admin_assets/vendors/simple-datatables/style.css')?>" />
 
     <link
       rel="stylesheet"
-      href="/../admin_assets/vendors/perfect-scrollbar/perfect-scrollbar.css"
-    />
+      href="<?= Route::createUrl('admin_assets/vendors/perfect-scrollbar/perfect-scrollbar.css')?>" />
     <link
       rel="stylesheet"
-      href="/../admin_assets/vendors/bootstrap-icons/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="/../admin_assets/css/app.css" />
+      href="<?= Route::createUrl('admin_assets/vendors/bootstrap-icons/bootstrap-icons.css')?>" />
+    <link rel="stylesheet" href="<?= Route::createUrl('admin_assets/css/app.css')?>" />
     <link
       rel="shortcut icon"
-      href="/../admin_assets/images/favicon.svg"
+      href="<?= Route::createUrl('admin_assets/images/favicon.svg')?>"
       type="image/x-icon"
     />
   </head>
@@ -155,16 +157,16 @@ try {
         </div>
       </div>
     </div>
-    <script src="/../admin_assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="/../admin_assets/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= Route::createUrl('admin_assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js')?>"></script>
+    <script src="<?= Route::createUrl('admin_assets/js/bootstrap.bundle.min.js')?>"></script>
 
-    <script src="/../admin_assets/vendors/simple-datatables/simple-datatables.js"></script>
+    <script src="<?= Route::createUrl('admin_assets/vendors/simple-datatables/simple-datatables.js')?>"></script>
     <script>
       // Simple Datatable
       let table1 = document.querySelector("#table1");
       let dataTable = new simpleDatatables.DataTable(table1);
     </script>
 
-    <script src="/../admin_assets/js/main.js"></script>
+    <script src="<?= Route::createUrl('admin_assets/js/main.js')?>"></script>
   </body>
 </html>
