@@ -157,6 +157,10 @@ try {
                 font-size: 12px;
             }
         }
+
+        body{
+            margin-top: 150px;
+        }
     </style>
 
 
