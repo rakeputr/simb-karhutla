@@ -1,17 +1,17 @@
-<html lang="id" style="overflow: visible; height: initial">
+<html lang="id" style="overflow: visible; height: initial;">
 
 <?php include(__DIR__ . '/src/Templates/head_gtk.php'); ?>
 
-<body data-aos-easing="ease" data-aos-duration="500" data-aos-delay="0" style="overflow: visible; height: initial;" class="fp-responsive fp-viewing-tata-kelola-gambut-indonesia" data-new-gr-c-s-check-loaded="14.1088.0" data-gr-ext-installed="">
+<body data-aos-easing="ease" data-aos-duration="500" data-aos-delay="0" style="overflow: visible;" class="fp-responsive fp-viewing-tata-kelola-gambut-indonesia" data-new-gr-c-s-check-loaded="14.1088.0">
     
 <?php include (__DIR__ . '/src/Templates/navbar gtk.php') ?>
 
-    <div id="Content">
+    <div id="Content" >
              <section id="pelajari-index">
 
     <div>
                     
-        <div class="section fp-section" id="link-kebakaran-hutan-lahan-gambut" data-anchor="kebakaran-hutan-lahan-gambut" style="height: 642px;">
+        <div class="section fp-section" id="link-kebakaran-hutan-lahan-gambut" data-anchor="kebakaran-hutan-lahan-gambut">
             <div class="table-lo">
                 <div class="cell">
                     
