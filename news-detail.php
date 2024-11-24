@@ -37,6 +37,8 @@ try {
 
 include (__DIR__ . '/src/Templates/header.php'); 
 ?>
+</head>
+<body>
         <main>
 
             <section class="hero" id="hero">

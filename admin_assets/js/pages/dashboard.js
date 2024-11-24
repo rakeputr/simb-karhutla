@@ -1,9 +1,25 @@
+async function getActiveResponse() {
+  let first_promise = new Promise(async (resolve, reject) => {
+    const dataActiveRequest = await fetch(
+      "http://localhost/simb-karhutla/api/statistik-gender"
+    );
+
+    let dataActiveResponse = await dataActiveRequest.json();
+
+    resolve([dataActiveResponse.active, dataActiveResponse.inactive]);
+  });
+
+  return first_promise;
+}
+
 async function getStatistic() {
   const response = await fetch(
     "http://localhost/simb-karhutla/api/statistik-kebakaran"
   );
 
   const results = await response.json();
+
+  const dataActiveResponse = await getActiveResponse();
 
   const data = results.map((d) => {
     return d.jumlah;
@@ -56,8 +72,8 @@ async function getStatistic() {
     },
   };
   let optionsVisitorsProfile = {
-    series: [70, 30],
-    labels: ["Male", "Female"],
+    series: dataActiveResponse,
+    labels: ["Active", "Inactive"],
     colors: ["#435ebe", "#55c6e8"],
     chart: {
       type: "donut",
