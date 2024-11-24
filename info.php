@@ -177,8 +177,8 @@ try {
             ini tolong di ganti
         </p>
     </div>
-    <a href="form_pelaporan.php" class="btn btn-warning" style="font-size:25px ;border-radius: 10px ;background-color: rgb(255, 140, 0); padding: 5px 15px;">
-    +
+    <a href="form_pelaporan.php" class="btn btn-warning" style="font-size:18px ;border-radius: 5px ;background-color: rgb(255, 140, 0); padding: 5px 15px;">
+    Buat Laporan
     </a>
 </div>
   <section class="section">
