@@ -3,6 +3,8 @@
 require_once(__DIR__ . "/../vendor/autoload.php");
 
 use Farhanisty\Vetran\Application;
+use Farhanisty\Vetran\Facades\Connection\Connection;
+use Farhanisty\Vetran\Facades\Response;
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
@@ -23,4 +25,26 @@ $route->get("simb-karhutla/api/statistik-kebakaran", function() use($app) {
     $results = $stmt->fetchAll(\PDO::FETCH_ASSOC);
     
     $app->getResponse()->responseJson()->setBody($results)->setStatus(Farhanisty\Vetran\Facades\Response::OK)->build();
+});
+
+function getCountGender($status) {
+    $connection = Connection::getInstance();
+    $stmt = $connection->query("SELECT COUNT(i.status) active FROM information i WHERE i.status = " . $status);
+    $result = $stmt->fetch(\PDO::FETCH_ASSOC);
+    return $result;
+}
+
+$route->get("simb-karhutla/api/statistik-gender", function() use($app) {
+    $active = getCountGender(1)['active'];
+    $inactive = getCountGender(0)['active'];
+
+    $app
+    ->getResponse()
+    ->responseJson()
+    ->setBody([
+        'active' => $active,
+        'inactive' => $inactive
+    ])
+    ->setStatus(Response::OK)
+    ->build();
 });

@@ -23,6 +23,7 @@ include (__DIR__ . '/src/Templates/header.php'); ?>
     }
 </style>
 </head>
+<body>
         <main>
 
             <section class="hero" id="hero">

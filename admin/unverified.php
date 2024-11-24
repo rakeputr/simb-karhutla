@@ -144,8 +144,10 @@ try {
                                             <?php endif; ?>
                                         </td>
                                         <td>
+                                          <div class="d-flex gap-2">
                                           <a href="verified-post.php?id=<?=$row['id']?>" class="rounded-pill btn btn-success"> approve </a>
                                           <a href="/../src/Facades/PelaporanDelete.php?reject=<?=$row['id']?>" class="rounded-pill btn btn-danger"> Hapus </a>
+                                        </div>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
