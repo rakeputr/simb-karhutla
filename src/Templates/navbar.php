@@ -41,10 +41,6 @@ require_once(__DIR__ . '/../Facades/Route.php');
         <li class="nav-item">
           <a class="nav-link" href="info.php">Pelaporan</a>
         </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="form_pelaporan.php">Form Pelaporan</a>
-        </li>
         <?php  if (isAdmin()) : ?>
         <li class="nav-item">
           <a class="nav-link" href="admin/dashboard.php">Admin(doang)</a>
