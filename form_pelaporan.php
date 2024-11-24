@@ -195,7 +195,7 @@ try {
                                                 </div> -->
                                                 <div class="col-12 d-flex justify-content-end">
                                                     <button type="submit"
-                                                        class="btn btn-primary me-1 mb-1" id="submitForm" name="submitForm">Submit</button>
+                                                        class="btn me-1 mb-1" id="submitForm" name="submitForm" style="color: white; background-color:rgb(255, 140, 0)">Submit</button>
                                                     <button type="reset"
                                                         class="btn btn-light-secondary me-1 mb-1">Reset</button>
                                                 </div>
