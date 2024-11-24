@@ -170,12 +170,17 @@ try {
   <?php include (__DIR__ . '/src/Templates/navbar gtk.php') ?>
 
   <div class="container mt-5">
-  <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>DataTable</h3>
-                <p class="text-subtitle text-muted">
-                  For user to check they list
-                </p>
-              </div>
+  <div class="d-flex justify-content-between align-items-center">
+    <div>
+        <h3>Ini juga diganti</h3>
+        <p class="text-subtitle text-muted">
+            ini tolong di ganti
+        </p>
+    </div>
+    <a href="form_pelaporan.php" class="btn btn-warning" style="background-color: rgb(255, 140, 0); padding: 15px 20px;">
+        Tambah Laporan
+    </a>
+</div>
   <section class="section">
             <div class="card">
               <div class="card-header">Data Pelaporan</div>

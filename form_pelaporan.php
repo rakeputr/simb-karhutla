@@ -107,6 +107,10 @@ try {
                 font-size: 12px;
             }
         }
+
+        body{
+            margin-top: 150px;
+        }
     </style>
 
 
@@ -117,9 +121,9 @@ try {
 
   <div class="container mt-5">
   <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>DataTable</h3>
+                <h3>ini diganti yaa</h3>
                 <p class="text-subtitle text-muted">
-                  For user to check they list
+                  sama jugaa
                 </p>
               </div>
      <!-- // Basic multiple Column Form section start -->
