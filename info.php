@@ -177,8 +177,8 @@ try {
             ini tolong di ganti
         </p>
     </div>
-    <a href="form_pelaporan.php" class="btn btn-warning" style="background-color: rgb(255, 140, 0); padding: 15px 20px;">
-        Tambah Laporan
+    <a href="form_pelaporan.php" class="btn btn-warning" style="font-size:25px ;border-radius: 10px ;background-color: rgb(255, 140, 0); padding: 5px 15px;">
+    +
     </a>
 </div>
   <section class="section">
@@ -204,9 +204,11 @@ try {
                                         <td><?php echo htmlspecialchars($row['name']); ?></td>
                                         <td>
                                             <?php if ($row['status'] === 1): ?>
-                                                <span class="badge bg-success">Active</span>
+                                                <!-- <span class="badge bg-success">Active</span> -->
+                                                <img src="images/on.png" style="height: 50px; width:auto" alt="active">
                                             <?php else: ?>
-                                                <span class="badge bg-danger">Inactive</span>
+                                                <!-- <span class="badge bg-danger">Inactive</span> -->
+                                                <img src="images/off.png" style="height: 50px; width:auto" alt="inactive">
                                             <?php endif; ?>
                                         </td>
                                     </tr>
