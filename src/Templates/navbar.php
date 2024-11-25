@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . '/../Facades/Auth.php');
+require_once(__DIR__ . '/../Facades/authentication.php');
 require_once(__DIR__ . '/../Facades/Route.php');
 ?>
 <style>
@@ -35,20 +35,26 @@ require_once(__DIR__ . '/../Facades/Route.php');
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="index.php#portfolio">About Us</a>
+          <a class="nav-link" href="ourTeam.php">About Us</a>
         </li>
 
         <li class="nav-item">
           <a class="nav-link" href="info.php">Pelaporan</a>
         </li>
-
+        <?php  if (isAdmin()) : ?>
         <li class="nav-item">
           <a class="nav-link" href="admin/dashboard.php">Admin(doang)</a>
         </li>
+        <?php endif; ?>
 
-        <?php if (Auth::isLogged()): ?>
+        <?php if (isLogged()): ?>
           <li class="nav-item">
             <a class="nav-link" href="<?= Route::createUrl('logout.php') ?>">Logout</a>
+          </li>
+        <?php endif; ?>
+        <?php if (!isLogged()): ?>
+          <li class="nav-item">
+            <a class="nav-link" href="<?= Route::createUrl('login.php') ?>">Login</a>
           </li>
         <?php endif; ?>
       </ul>

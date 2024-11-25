@@ -1,44 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-
-
+<html="en">
 <?php include(__DIR__ . '/src/Templates/head_gtk.php'); ?>
+</head>
 
 <body>
-
 <?php include (__DIR__ . '/src/Templates/navbar gtk.php') ?>
 
-   <div id="Content">
-    <section id="pelajari-nav" class="d-none d-md-block">
-   <div class="nav carousel">
-       <ul>
-            <li>
-                <a href="pengertian.php">
-                    <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-1-DuhWD.png">
-                    <span>Pengertian</span>
-                </a>
-            </li>
-            <li>
-                <a href="mitigasi.php">
-                    <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-5-BA2OU.png">
-                    <span>Mitigasi</span>
-                </a>
-            </li>
-            <li> 
-                <a href="dampak.php">
-                    <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-3-8ZJjo.png">
-                    <span>Dampak</span>
-                </a>
-            </li>
-            <li>
-                <a href="penanggulangan.php">
-                    <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-4-FVXdZ.png">
-                    <span>Penanggulangan</span>
-                </a>
-            </li>
-        </ul>
-   </div>
+<div id="Content">
+    <hr id="hr1">
+    <section id="bar">
+        <a href="pengertian.php">
+            <div>
+                <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-1-DuhWD.png" alt="Pengertian">
+                <span>Pengertian</span>
+            </div>
+        </a>
+        <a href="mitigasi.php">
+            <div>
+                <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-5-BA2OU.png" alt="Mitigasi">
+                <span>Mitigasi</span>
+            </div>
+        </a>
+        <a href="dampak.php">
+            <div>
+                <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-3-8ZJjo.png" alt="Dampak">
+                <span>Dampak</span>
+            </div>
+        </a>
+        <a href="penanggulangan.php">
+            <div>
+                <img src="https://pantaugambut.id/images/pelajari-icon/knowledges/5-4-FVXdZ.png" alt="Penanggulangan">
+                <span>Penanggulangan</span>
+            </div>
+        </a>
     </section>
+    <hr id="hr2">
 
     <section id="pelajari-detail">
    <a href="gtk.php" class="back">Kembali</a>
@@ -54,9 +50,7 @@
     <div class="container c-100" >
         <div class="w910">
             <div class="img with-ornament">
-                <img src="https://pantaugambut.id/images/original/widget/5-zn0du-resize-KClQb.jpg"
-                    alt="alt optional"/>
-                <div class="caption">caption</div>
+                <img src="https://pantaugambut.id/images/original/widget/5-zn0du-resize-KClQb.jpg"/>
             </div>
         </div>
     </div> 
@@ -67,7 +61,7 @@
         <div class="container" >
             <div class="W730">
                     <p>
-                        Kebakaran hutan dan lahan (karhutla) di Indonesia disebabkan oleh beberapa faktor utama, baik alamiah maupun aktivitas manusia. Salah satu penyebab utamanya adalah kegiatan pembukaan lahan dengan metode pembakaran, terutama di kawasan hutan gambut yang kaya akan bahan organik. Praktik ini dianggap cepat dan murah, tetapi dampaknya sangat merusak lingkungan, menyebabkan kebakaran yang sulit dipadamkan. Selain itu, musim kemarau panjang yang diperparah oleh fenomena El Niño juga turut memperbesar risiko karhutla, karena kondisi tanah menjadi sangat kering dan mudah terbakar. 
+                    Kebakaran hutan dan lahan (karhutla) di Indonesia disebabkan oleh beberapa faktor utama, baik alamiah maupun aktivitas manusia. Salah satu penyebab utamanya adalah kegiatan pembukaan lahan dengan metode pembakaran, terutama di kawasan hutan gambut yang kaya akan bahan organik. Praktik ini dianggap cepat dan murah, tetapi dampaknya sangat merusak lingkungan, menyebabkan kebakaran yang sulit dipadamkan. Selain itu, musim kemarau panjang yang diperparah oleh fenomena El Niño juga turut memperbesar risiko karhutla, karena kondisi tanah menjadi sangat kering dan mudah terbakar. 
                     </p>
 
                     <p>

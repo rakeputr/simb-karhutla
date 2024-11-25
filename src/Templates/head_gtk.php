@@ -31,7 +31,27 @@ require_once (__DIR__ . '/../Facades/Route.php');
         font-family: 'Poppins', sans-serif;
         color: rgb(255, 140, 0);
       }
-    </style>
-  </head>
 
-<body>
+      #bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10rem;
+        margin-top: 3rem;
+        padding-bottom: 15px;
+    }
+
+    #bar div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #bar img {
+        width: auto;
+        height: 60px;
+    }
+    </style>
+  
+
+

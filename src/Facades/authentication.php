@@ -83,6 +83,17 @@ function loginAttempt($formData)
     return true;
 }
 
+function getLoggedUser()
+{
+    if (!isLogged()) {
+        return null;
+    }
+
+    $connection = Connection::getInstance();
+    $stmt = $connection->prepare("SELECT * FROM user WHERE id = :id");
+    $stmt->execute(['id' => $_SESSION['id']]);
+    return $stmt->fetch(PDO::FETCH_OBJ);
+}
 
 
 function isLogged()
