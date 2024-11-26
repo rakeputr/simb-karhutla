@@ -129,7 +129,7 @@ try {
                                         <td>
                                         <div class="d-flex gap-2">
                                             <a href="edit-news.php?id=<?=$row['id']?>" class="rounded-pill btn btn-info"> Edit </a>
-                                            <a href="/../src/Facades/NewsDelete.php?id=<?=$row['id']?>" class="rounded-pill btn btn-danger"> Hapus </a>
+                                            <a href="<?= Route ::createUrl("src/Facades/NewsDelete.php?id=" . $row['id'])?>" class="rounded-pill btn btn-danger"> Hapus </a>
                                             <!-- <button class="rounded-pill btn btn-danger">Hapus</button> -->
                                         </div>
                                         </td>

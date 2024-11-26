@@ -75,7 +75,7 @@ $title = "Tulis Berita";
                                     <h4 class="card-title">Form Tulis Berita</h4>
                                 </div>
                                 <div class="card-body">
-                                <form action="/../src/Facades/NewsUpload.php" method="POST" enctype="multipart/form-data">
+                                <form action="<?= Route::createUrl('src/Facades/NewsUpload.php')?>" method="POST" enctype="multipart/form-data">
     <div class="row">
         <!-- Input Judul -->
         <div class="col-md-6 col-12">

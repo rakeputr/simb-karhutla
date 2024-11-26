@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'Connection.php'; // Koneksi database
+require_once 'Route.php'; // Koneksi database
 
 // Mendapatkan ID berita yang akan dihapus
 if (isset($_GET['id']) && !empty($_GET['id'])) {
@@ -16,7 +16,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     if ($stmt->execute()) {
         // Berhasil menghapus berita
-        echo "<script>alert('Berita berhasil dihapus!'); window.location.href='/../../admin/news.php';</script>";
+        echo "<script>alert('Berita berhasil dihapus!'); window.location.href='".Route::createUrl('admin/news.php')."';</script>";
     } else {
         // Gagal menghapus berita
         echo "<script>alert('Gagal menghapus berita!'); window.history.back();</script>";
