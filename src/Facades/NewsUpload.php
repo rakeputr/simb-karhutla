@@ -75,7 +75,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         if ($stmt->execute()) {
-            echo "<script>alert('Berita berhasil diperbarui!'); window.location.href='/../../admin/news.php';</script>";
+            echo "<script>
+            alert('Berita berhasil diperbarui!'); 
+            window.location.href='".Route::createUrl('admin/news.php')."';
+            </script>";
         } else {
             echo "<script>alert('Gagal memperbarui berita!'); window.history.back();</script>";
         }
@@ -100,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':admin_id', $admin_id);
 
         if ($stmt->execute()) {
-            echo "<script>alert('Data berhasil disimpan!'); window.location.href='/../../admin/news.php';</script>";
+            echo "<script>alert('Data berhasil disimpan!'); window.location.href='".Route::createUrl('admin/news.php')."';</script>";
         } else {
             echo "<script>alert('Gagal menyimpan data!'); window.history.back();</script>";
         }

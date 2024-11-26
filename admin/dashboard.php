@@ -265,7 +265,7 @@ $title = "Dashboard";
                                                   data-bs-toggle="modal" data-bs-target="#editStatusModal">
                                               Edit
                                           </button>
-                                          <a href="/../src/Facades/PelaporanDelete.php?id=<?=$row['id']?>" class="rounded-pill btn btn-danger"> Hapus </a>
+                                          <a href="<?= Route ::createUrl("src/Facades/PelaporanDelete.php?id=" . $row['id'])?>" class="rounded-pill btn btn-danger"> Hapus </a>
                                         </div>
                                       </td>
                                     </tr>

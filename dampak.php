@@ -37,25 +37,76 @@
     <hr id="hr2">
 
     <section id="pelajari-detail">
-   <a href="gtk.php" class="back">Kembali</a>
-<div class="container intro mb-0" >
-   <label class="category">Kebakaran Hutan &amp; Lahan</label>
-   <h1 class="with-line"><span>Dampak</span></h1>
-   <div class="lead mb-0">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In magna felis, cursus ut maximus nec, posuere eget orci. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus eget tellus luctus, placerat purus ac, bibendum sapien. Nulla quam ipsum, fringilla et iaculis id, luctus non arcu. </p>
-</div>
-</div>
+    <a href="gtk.php" class="back">Kembali</a>
+    <div class="container intro mb-0">
+        <label class="category">Kebakaran Hutan &amp; Lahan</label>
+        <h1 class="with-line"><span>Dampak</span></h1>
+        <div class="lead mb-0">
+            <p>
+            Kebakaran hutan dan lahan memiliki dampak negatif yang signifikan, seperti kerusakan lingkungan, peningkatan emisi gas rumah kaca, gangguan kesehatan masyarakat, dan kerugian ekonomi. Meskipun dalam beberapa kasus dapat membantu regenerasi ekosistem, dampak positifnya tidak sebanding dengan kerusakannya.
+            </p>
+        </div>
+    </div>
 
     <div class="k-widget text-based text">
-        <div class="container" >
+        <div class="container">
             <div class="W730">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In magna felis, cursus ut maximus nec, posuere eget orci. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus eget tellus luctus, placerat purus ac, bibendum sapien. Nulla quam ipsum, fringilla et iaculis id, luctus non arcu. Mauris non ullamcorper metus. Sed nec enim sem. Proin egestas aliquet rhoncus. Donec ac pulvinar nulla. Etiam finibus elit non erat rhoncus lacinia. </p>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In magna felis, cursus ut maximus nec, posuere eget orci. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus eget tellus luctus, placerat purus ac, bibendum sapien. Nulla quam ipsum, fringilla et iaculis id, luctus non arcu. Mauris non ullamcorper metus. Sed nec enim sem. Proin egestas aliquet rhoncus. Donec ac pulvinar nulla. Etiam finibus elit non erat rhoncus lacinia. </p>
+                <div class="lead mb-0">
+                    <p>1. Dampak Positif</p>
+                </div>
+                <p>
+                Kebakaran hutan dan lahan, meskipun sering dipandang sebagai bencana, memiliki beberapa dampak positif dalam konteks tertentu, salah satunya adalah menyuburkan lahan. Proses pembakaran menghasilkan abu yang kaya akan mineral, seperti fosfor dan kalium, yang dapat meningkatkan kesuburan tanah dan mendukung pertumbuhan tanaman. Selain itu, panas yang dihasilkan dari kebakaran mampu membunuh patogen dan hama tanaman yang bersarang di tanah, sehingga mengurangi risiko penyakit tanaman di masa mendatang. Namun, dampak positif ini harus dilihat dengan hati-hati, mengingat kerugian ekologis dan sosial yang jauh lebih besar akibat kebakaran tidak terkendali.
+                </p>
+                <br>
+                <div class="lead mb-0">
+                    <p>2. Dampak Negatif terhadap lingkungan</p>
+                </div>
+                <section class="pg-widget default-gap image-based full-picture-horizontal">
+                    <div class="container c-100">
+                        <div class="w910">
+                            <div class="img with-ornament">
+                                <img src="images\eko.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Kebakaran hutan dan lahan membawa dampak negatif yang signifikan terhadap lingkungan dan kehidupan. Salah satu dampaknya adalah hilangnya habitat makhluk hidup, yang mengakibatkan terganggunya keseimbangan ekosistem dan mengancam kelangsungan berbagai spesies flora dan fauna. Selain itu, kebakaran ini juga sering menyebabkan korban jiwa, baik manusia maupun hewan, akibat terperangkap dalam kebakaran atau terkena dampak asap beracun.
+                    </p>
+                    <div class="container c-100">
+                        <div class="w910">
+                            <div class="img with-ornament">
+                                <img src="images\global.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Pemanasan global turut diperparah karena kebakaran hutan melepaskan sejumlah besar gas rumah kaca, seperti karbon dioksida, ke atmosfer. Polusi udara yang dihasilkan dari asap kebakaran tidak hanya mencemari lingkungan tetapi juga berdampak buruk bagi kesehatan masyarakat, menyebabkan gangguan pernapasan hingga penyakit serius lainnya.
+                    </p>
+                    <br>
+                    <div class="lead mb-0">
+                        <p>3. Dampak Negatif terhadap ekonomi</p>
+                    </div>
+                    <section class="pg-widget default-gap image-based full-picture-horizontal">
+                        <div class="container c-100">
+                            <div class="w910">
+                                <div class="img with-ornament">
+                                    <img src="images\rugi.jpg" alt="alt optional" />
+                                    <div class="caption">caption</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                        Kebakaran hutan dan lahan juga menimbulkan dampak negatif yang signifikan pada sektor ekonomi. Salah satunya adalah kerugian ekonomi yang besar, baik bagi pemerintah, masyarakat, maupun sektor bisnis. Kerusakan infrastruktur, biaya pemadaman kebakaran, serta dampak jangka panjang terhadap pariwisata dan pertanian menyebabkan kerugian finansial yang tidak sedikit. Selain itu, kebakaran mengakibatkan kehilangan lahan produktif yang seharusnya dapat digunakan untuk pertanian atau kegiatan ekonomi lainnya. Kehilangan tanah yang subur ini mengurangi potensi hasil pertanian, mengancam ketahanan pangan, dan mempengaruhi pendapatan petani serta pengusaha yang bergantung pada hasil bumi tersebut.
+                        </p>
+                        <br>
+                    </section>
+                </div>
             </div>
         </div>
-    </div> 
+    </div>
 </section>
+
+
 
     <section class="related-knowledge">
        <div class="container c-100">

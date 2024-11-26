@@ -78,7 +78,7 @@ include (__DIR__ . '/src/Templates/header.php');
                                     <figure class="figure">
                                         <img src="uploads/<?=$results["picture"]?>" class="img-fluid news-image" alt="">
 
-                                        <figcaption class="figure-caption">Images</figcaption>
+                                        <figcaption class="figure-caption">Gambar</figcaption>
                                     </figure>
                                 </div>
                             </div>
@@ -154,13 +154,13 @@ include (__DIR__ . '/src/Templates/header.php');
                             Kabupaten Sleman, Indonesia
                         </h5>
 
-                        <a href="mailto:124230105@student.upnyk.ac.id" class="custom-link mt-3 mb-5">
+                        <a href="mailto:info@company.com" class="custom-link mt-3 mb-5">
                             Kelompok 6
                         </a>
                     </div>
 
                     <div class="col-6">
-                        <p class="copyright-text mb-0">Copyright © 2021 
+                        <p class="copyright-text mb-0">Copyright © 2024 
                         
                         <br><br>Design: <a href="https://templatemo.com/page/1" target="_parent">Kelompok 6</a></p>
                     
