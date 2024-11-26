@@ -54,7 +54,7 @@ require_once(__DIR__ . '/../Facades/Route.php');
         <?php endif; ?>
         <?php if (!isLogged()): ?>
           <li class="nav-item">
-            <a class="nav-link" href="<?= Route::createUrl('login.php') ?>">Login</a>
+            <a class="nav-link" href="<?= Route::createUrl('loginNew.php') ?>">Login</a>
           </li>
         <?php endif; ?>
       </ul>
