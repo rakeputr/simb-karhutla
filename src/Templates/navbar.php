@@ -35,7 +35,7 @@ require_once(__DIR__ . '/../Facades/Route.php');
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="index.php#portfolio">About Us</a>
+          <a class="nav-link" href="ourTeam.php">About Us</a>
         </li>
 
         <li class="nav-item">

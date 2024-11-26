@@ -49,7 +49,8 @@ include (__DIR__ . '/src/Templates/header.php'); ?>
 
             <?php include (__DIR__ . '/src/Templates/navbar.php') ?>
 
-            <section class="section-padding pb-0" id="about">
+            
+            <!--<section class="section-padding pb-0" id="about">
                 <div class="container mb-5 pb-lg-5">
                     <div class="row">
                         <div class="col-12">
@@ -100,18 +101,18 @@ include (__DIR__ . '/src/Templates/header.php'); ?>
                                     <div class="carousel-item">
                                         <img src="images/img5.webp" style="height: 100px" class="img-fluid team-image" alt="">
 
-                                        <div class="team-thumb bg-warning">
-                                            <h3 class="text-white mb-0">Pontianak</h3>
+                                        <div class="team-thumb bg-primary">
+                                            <h3 class="text-white mb-0">Adriano</h3>
 
                                             <p class="text-secondary-white-color mb-0">2012</p>
                                         </div>
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="images/img3.webp" style="height: 100px" class="img-fluid team-image" alt="">
+                                        <img src="images/people/fera.jpeg" class="img-fluid team-image" alt="">
 
-                                        <div class="team-thumb bg-warning">
-                                            <h3 class="text-white mb-0">Banten</h3>
+                                        <div class="team-thumb bg-success">
+                                            <h3 class="text-white mb-0">Ferawati Ginting</h3>
 
                                             <p class="text-secondary-white-color mb-0">2014</p>
                                         </div>
@@ -143,8 +144,8 @@ include (__DIR__ . '/src/Templates/header.php'); ?>
                         </div>
                     </div>
                 </div>
-            </section>
-
+            </section>-->
+            
             <section class="section-padding" id="portfolio">
                 <div class="container">
                     <div class="row">
