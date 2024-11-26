@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once 'Connection.php';
 require_once 'Route.php'; // Koneksi database
 
 // Mendapatkan ID berita yang akan dihapus
