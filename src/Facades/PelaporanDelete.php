@@ -17,7 +17,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     if ($stmt->execute()) {
         // Berhasil menghapus berita
-        echo "<script>alert('Pelaporan berhasil dihapus!'); window.location.href='/../../admin/dashboard.php';</script>";
+        echo "<script>alert('Pelaporan berhasil dihapus!'); window.location.href='/../simb-karhutla/admin/dashboard.php';</script>";
     } else {
         // Gagal menghapus berita
         echo "<script>alert('Gagal menghapus pelaporan!'); window.history.back();</script>";
