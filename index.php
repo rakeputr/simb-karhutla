@@ -356,9 +356,10 @@ include (__DIR__ . '/src/Templates/header.php'); ?>
             </section> -->
 
         </main>
-
         <footer class="site-footer">
             <div class="container">
+
+
                 <div class="row align-items-center">
 
                     <div class="col-6">
