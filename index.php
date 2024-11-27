@@ -145,7 +145,7 @@ include (__DIR__ . '/src/Templates/header.php'); ?>
                 </div>
             </section>
 
-            <section class="section-padding" id="portfolio">
+            <!-- <section class="section-padding" id="portfolio">
                 <div class="container">
                     <div class="row">
 
@@ -155,14 +155,14 @@ include (__DIR__ . '/src/Templates/header.php'); ?>
 
                         <div class="col-lg-6 col-12">
                             <div class="portfolio-thumb mb-5" data-aos="fade-up">
-                                <a href="images/portfolio/visuals-Y4qzW3AsvqI-unsplash.jpeg" class="image-popup">
+                            <iframe width="700" height="400" src="https://www.youtube.com/embed/GWJZ8v1gqbw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     <img src="images/portfolio/visuals-Y4qzW3AsvqI-unsplash.jpeg" class="img-fluid portfolio-image" alt="">
                                 </a>
 
                                 <div class="portfolio-info">                     
-                                    <h4 class="portfolio-title mb-0">Effortless</h4>
+                                    <h4 class="portfolio-title mb-0">Kebakaran Hutan Menoreh</h4>
 
-                                    <p class="text-danger">Branding</p>
+                                    <p class="text-danger">Kulon Progo, DIY</p>
                                 </div>
                             </div> 
 
@@ -193,20 +193,18 @@ include (__DIR__ . '/src/Templates/header.php'); ?>
                             </div> 
 
                             <div class="portfolio-thumb" data-aos="fade-up">
-                                <a href="images/portfolio/thought-catalog-gv-T-OjLe4c-unsplash.jpeg" class="image-popup">
-                                    <img src="images/portfolio/thought-catalog-gv-T-OjLe4c-unsplash.jpeg" class="img-fluid portfolio-image" alt="">
-                                </a>
+                            <iframe width="700" height="400" src="https://youtu.be/tBUwhdjWTjs?si=GSRk0b7Khdvqoq_N" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                                 <div class="portfolio-info">                     
-                                    <h4 class="portfolio-title mb-0">The gig economy</h4>
+                                    <h4 class="portfolio-title mb-0">Palangkaraya</h4>
 
-                                    <p class="text-info">Graphic</p>
+                                    <p class="text-info">Kalimantan Tengah</p>
                                 </div>
                             </div> 
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <section class="news section-padding" id="news">
                 <div class="container">
