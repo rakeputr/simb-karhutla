@@ -53,7 +53,7 @@ async function getStatistic() {
         data: data,
       },
     ],
-    colors: "#435ebe",
+    colors: "#FF8C00",
     xaxis: {
       categories: [
         "Jan",
@@ -74,7 +74,7 @@ async function getStatistic() {
   let optionsVisitorsProfile = {
     series: dataActiveResponse,
     labels: ["Active", "Inactive"],
-    colors: ["#435ebe", "#55c6e8"],
+    colors: ["#FF8C00", "#ffba66"],
     chart: {
       type: "donut",
       width: "100%",

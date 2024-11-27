@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include(__DIR__ . '/src/Templates/head_gtk.php'); ?>
+<?php
+session_start();
+include(__DIR__ . '/src/Templates/head_gtk.php'); ?>
 
 <body>
 <?php include (__DIR__ . '/src/Templates/navbar gtk.php') ?>
