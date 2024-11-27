@@ -1,5 +1,6 @@
 <?php 
-
+session_start();
+$title = "News";
 require_once (__DIR__ . '/src/Facades/Connection.php');
 
 if (isset($_GET["id"])) {

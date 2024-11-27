@@ -1,55 +1,43 @@
 <?php
-
 session_start();
-
 require_once (__DIR__ . "/src/Facades/authentication.php");
-// require_once (__DIR__ . "src/Facades/functions.php");
 
 if (isLogged()) {
-  header("Location:index.php");
+    header("Location:index.php");
+    exit;
 }
 
+$error_message = "";
 
-if (isset($_POST["login"])) {
-  $result = loginAttempt($_POST);
-  if ($result) {
-    header("Location:index.php");
-  }
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["login"])) {
+    $result = loginAttempt($_POST);
+    if ($result) {
+        header("Location:index.php");
+        exit;
+    } else {
+        $error_message = "Username atau password salah. Silakan coba lagi.";
+    }
 }
 
 if (isset($_GET['message'])) {
-  if ($_GET['message'] == "not_admin") {
-    ?>
-    <script>
-      alert('Hanya Admin yang bisa mengakses halaman admin!')
-    </script>
-    <?php
-  } elseif ($_GET['message'] == "login_admin") {
-    ?>
-    <script>
-      alert('Silahkan login untuk mengakses halaman admin!')
-    </script>
-    <?php
-  } elseif ($_GET['message'] == "belum_login") {
-    ?>
-    <script>
-      alert('Silahkan login untuk membuat pelaporan!')
-    </script>
-    <?php
-  } 
+    $messages = [
+        "not_admin" => "Hanya Admin yang bisa mengakses halaman admin!",
+        "login_admin" => "Silahkan login untuk mengakses halaman admin!",
+        "belum_login" => "Silahkan login untuk membuat pelaporan!"
+    ];
+    $error_message = $messages[$_GET['message']] ?? "";
 }
 ?>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Pantau Api</title>
-  <!--<link rel="stylesheet" href="css/styleLogin.css"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Pantau Api</title>
+    <!--<link rel="stylesheet" href="css/styleLogin.css">-->
 
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -65,16 +53,7 @@ body {
   min-height: 100vh;
   width: 100%;
   padding: 0 10px;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url("https://drive.google.com/file/d/1g8F-CEBZ4Dlm7k5dc1QVgCJZqzhNyTGY/view?usp=drive_link"),#000;
-  background-position: center;
-  background-size: cover;
+  background: url("images/bg.jpg") no-repeat center center/cover, #000;
 }
 
 .wrapper {
@@ -82,6 +61,7 @@ body::before {
   border-radius: 8px;
   padding: 30px;
   text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Latar belakang transparan */
   border: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
@@ -95,6 +75,11 @@ form {
 h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  color: #fff;
+}
+
+p {
+  font-size: 0.9rem;
   color: #fff;
 }
 
@@ -125,8 +110,8 @@ h2 {
   color: #fff;
 }
 
-.input-field input:focus~label,
-.input-field input:valid~label {
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
   font-size: 0.8rem;
   top: 10px;
   transform: translateY(-120%);
@@ -141,7 +126,7 @@ h2 {
 }
 
 #remember {
-  accent-color: #fff;
+  accent-color: #fff; /* Warna checkbox */
 }
 
 .forget label {
@@ -186,32 +171,36 @@ button:hover {
   margin-top: 30px;
   color: #fff;
 }
-  </style>
+
+    </style>
 </head>
 <body>
-  <div class="wrapper">
-    <form action="#">
-      <h2>Login</h2>
-        <div class="input-field">
-        <input type="text" id="username" name="username"  class="form-control" required>
-        <label>Username</label>
-      </div>
-      <div class="input-field">
-        <input type="password" id="password" name="password" class="form-control" required>
-        <label>Password</label>
-      </div>
-      <div class="forget">
-        <label for="remember">
-          <input type="checkbox" id="remember">
-          <p>Remember me</p>
-        </label>
-        <a href="#">Forgot password?</a>
-      </div>
-      <button type="submit">Log In</button>
-      <div class="register">
-        <p>Don't have an account? <a href="#">Register</a></p>
-      </div>
-    </form>
-  </div>
+    <div class="wrapper">
+        <form id="loginForm" method="post" action="<?= htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+            <h2>Login</h2>
+            <?php if (!empty($error_message)): ?>
+                <p style="color: red;"><?= htmlspecialchars($error_message); ?></p>
+            <?php endif; ?>
+            <div class="input-field">
+                <input type="text" id="username" name="username" required>
+                <label>Username</label>
+            </div>
+            <div class="input-field">
+                <input type="password" id="password" name="password" required>
+                <label>Password</label>
+            </div>
+            <div class="forget">
+                <label for="remember">
+                    <input type="checkbox" id="remember" name="remember">
+                    <p>Remember me</p>
+                </label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" name="login">Log In</button>
+            <div class="register">
+                <p>Don't have an account? <a href="./registerNew.php">Register</a></p>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
