@@ -9,9 +9,10 @@ include (__DIR__ . '/src/Templates/header.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berita Terkini</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style> 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -23,24 +24,32 @@ include (__DIR__ . '/src/Templates/header.php');
             overflow: hidden;
         }
         .news-card {
-            background: #fff;
-            margin: 20px 0;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Pusatkan konten secara horizontal */
+        background: #fff;
+        margin: 20px auto; /* Agar setiap card berada di tengah halaman */
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        /*width: fit-content;  Ukuran kartu menyesuaikan isi */
+        max-width: 90%; /* Batasi ukuran maksimum kartu */
         }
         .news-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
+        width: 40%;
+        height: auto;
+        border-radius: 5px;
+        display: block; /* Hindari margin bawaan inline element */
         }
         .news-card h2 {
-            margin: 0;
-            padding-bottom: 10px;
-            color: #333;
-        }
+        margin: 0;
+        padding-bottom: 10px;
+        color: #333;
+        font-family: 'Roboto', sans-serif; /* Gunakan font dari Google Fonts */
+        font-weight: 400; /* Normal weight */
+        font-size: 1.5em; /* Ukuran font */
+}   
         .news-card p {
             color: #666;
         }
@@ -85,7 +94,7 @@ include (__DIR__ . '/src/Templates/header.php');
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo '<div class="news-card">';
-                echo '<img src="show-image.php?id=' . $row["id"] . '" alt="Gambar Berita">';
+                echo '<img src="uploads/' . htmlspecialchars($row["picture"]) . '" class="img-fluid news-image" alt="">';
                 echo '<h2>' . htmlspecialchars($row["title"]) . '</h2>';
                 echo '<p><small>' . htmlspecialchars($row["tanggal"]) . '</small></p>';
                 //echo '<p>' . htmlspecialchars(substr($row["contents"], 0, 100)) . '...</p>';
