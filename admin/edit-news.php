@@ -117,7 +117,7 @@ $title = "Berita";
                                     <h4 class="card-title">Form Tulis Berita</h4>
                                 </div>
                                 <div class="card-body">
-                                <form action="/../src/Facades/NewsUpload.php" method="POST" enctype="multipart/form-data">
+                                <form action="<?= Route::createUrl('src/Facades/NewsUpload.php')?>" method="POST" enctype="multipart/form-data">
                                     <div class="row">
                                         <!-- Hidden Field for ID -->
                                         <input type="hidden" name="id" value="<?php echo htmlspecialchars($row['id']); ?>">
