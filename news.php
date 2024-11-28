@@ -26,32 +26,25 @@ include (__DIR__ . '/src/Templates/header.php');
             margin: auto;
             overflow: hidden;
         }
-        .row {
-    display: flex; /* Membuat layout horizontal */
-    flex-wrap: wrap; /* Supaya kartu berpindah ke baris baru jika ruang habis */
-    gap: 20px; /* Jarak antar-kartu */
-}
-
-.news-card {
-    background-color: #f8f9fa; /* Warna latar belakang kartu */
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.news-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-.card-title {
-    font-size: 1.1em;
-    margin: 10px 0;
-}
+        .news-card {
+            background-color: #f8f9fa; /* Warna latar belakang kartu */
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 100%; /* Supaya semua kartu memiliki tinggi sama */
+            text-align: center;
+        }
+        .news-image {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .card-title {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
         .read-more {
             display: inline-block;
             margin-top: 10px;
@@ -61,14 +54,12 @@ include (__DIR__ . '/src/Templates/header.php');
             text-decoration: none;
             border-radius: 3px;
         }
-        .read-more:hover {
-            background: #0056b3;
-        }
     </style>
 </head>
 <?php include (__DIR__ . '/src/Templates/navbar.php') ?>
 <body>
     <div class="container">
+    <div class="row">
         <h1>Berita Terkini</h1>
         <?php
         // Konfigurasi database
@@ -92,25 +83,23 @@ include (__DIR__ . '/src/Templates/header.php');
         // Menampilkan news
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                echo '<div class="row">';
-                echo "<div class='col-sm-4 col md-3'>";
-                echo '<div class="news-card">';
-                echo '<img src="uploads/' . htmlspecialchars($row["picture"]) . '" class="img-fluid news-image" alt="">';
+                echo "<div class='col-md-4 d-flex align-items-stretch'>"; // Menampilkan 3 kartu per baris
+                echo '<div class="news-card flex-column d-flex ">';
+                echo '<img src="uploads/' . htmlspecialchars($row["picture"]) . '" class="img-fluid news-image mb-3" alt="">';
                 //echo '<div class="card-body">';
                 echo '<h5 class="card-title">' . htmlspecialchars($row["title"]) . '</h5>';
                 echo '<p><small>' . htmlspecialchars($row["tanggal"]) . '</small></p>';
                 echo '<a href="news-detail.php?id=' . htmlspecialchars($row["id"]) . '" class="read-more">Baca Selengkapnya</a>';
                 echo '</div>';
                 echo '</div>';
-                echo '</div>';
             }
         } else {
             echo "<p>Tidak ada news untuk ditampilkan.</p>";
         }
-
         // Menutup koneksi
         $conn->close();
         ?>
+    </div>
     </div>
 </body>
 <footer class="site-footer">
