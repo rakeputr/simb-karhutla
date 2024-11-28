@@ -76,6 +76,8 @@ try {
       href="<?= Route::createUrl('admin_assets/images/favicon.svg')?>"
       type="image/x-icon"
     />
+
+    
   </head>
 
   <body>

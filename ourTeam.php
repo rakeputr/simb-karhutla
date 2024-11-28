@@ -41,7 +41,7 @@ include (__DIR__ . '/src/Templates/header.php'); ?>
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-3 col-12 p-0">      
-                            <img src="images/elena-rabkina-eVVzwsNhNf4-unsplash.jpg" class="img-fluid about-image" alt="">
+                            <img src="images/ourTeambg.avif" class="img-fluid about-image" alt="">
                         </div>
 
                         <div class="col-lg-3 col-12 bg-dark">  
@@ -64,27 +64,27 @@ include (__DIR__ . '/src/Templates/header.php'); ?>
                             <section id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="images/people/studio-shot-beautiful-happy-retired-caucasian-female-with-pixie-hairdo-crossing-arms-her-chest-having-confident-look-smiling-broadly.jpg" class="img-fluid team-image" alt="">
+                                        <img src="images/people/rake.png" class="img-fluid team-image" alt="">
 
                                         <div class="team-thumb bg-warning">
                                             <h3 class="text-white mb-0">Rake Putri</h3>
 
-                                            <p class="text-secondary-white-color mb-0">Founding Partner</p>
+                                            <p class="text-secondary-white-color mb-0">124230107</p>
                                         </div>
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="images/people/project-leder-with-disabilities-looking-front-sitting-immobilized-wheelchair-business-office-room.jpg" class="img-fluid team-image" alt="">
+                                        <img src="images/people/ano.png" class="img-fluid team-image" alt="">
 
                                         <div class="team-thumb bg-primary">
                                             <h3 class="text-white mb-0">Adriano</h3>
 
-                                            <p class="text-secondary-white-color mb-0">CEO & Investor</p>
+                                            <p class="text-secondary-white-color mb-0">124230105</p>
                                         </div>
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="images/people/fera.jpeg" class="img-fluid team-image" alt="">
+                                        <img src="images/people/fera.png" class="img-fluid team-image" alt="">
 
                                         <div class="team-thumb bg-success">
                                             <h3 class="text-white mb-0">Ferawati Ginting</h3>
@@ -94,22 +94,22 @@ include (__DIR__ . '/src/Templates/header.php'); ?>
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="images/people/happy-african-american-professional-manager-smiling-looking-camera-headshot-portrait.jpg" class="img-fluid team-image" alt="">
+                                        <img src="images/people/nabil.png" class="img-fluid team-image" alt="">
 
                                         <div class="team-thumb bg-info">
-                                            <h3 class="text-white mb-0">Robinson H.</h3>
+                                            <h3 class="text-white mb-0">Rahman Nabil</h3>
 
-                                            <p class="text-secondary-white-color mb-0">Sales & Marketing</p>
+                                            <p class="text-secondary-white-color mb-0">124230110</p>
                                         </div>
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="images/people/working-business-lady.jpg" class="img-fluid team-image" alt="">
+                                        <img src="images/people/nobel.png" class="img-fluid team-image" alt="">
 
                                         <div class="team-thumb bg-danger">
-                                            <h3 class="text-white mb-0">Jane M.</h3>
+                                            <h3 class="text-white mb-0">M. Nobel Wurjayatma</h3>
 
-                                            <p class="text-secondary-white-color mb-0">Project Management</p>
+                                            <p class="text-secondary-white-color mb-0">124230114</p>
                                         </div>
                                     </div>
                                 </div>

@@ -8,7 +8,7 @@ require_once (__DIR__ . '/src/Facades/Connection.php');
 
 
     if (!isLogged()) {
-        Route::redirect('login.php?message=belum_login');
+        Route::redirect('loginNew.php?message=belum_login');
     }
 
 
