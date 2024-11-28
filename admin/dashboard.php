@@ -71,13 +71,6 @@ $title = "Dashboard";
     <link rel="stylesheet" href="<?= Route::createUrl('admin_assets/css/app.css')?>">
     <link rel="shortcut icon" href="<?= Route::createUrl('admin_assets/images/favicon.svg')?>" type="image/x-icon">
 
-    <style>
-    body #app {
-        background-color: #FFA500 !important; 
-    }
-    </style>
-
-
 </head>
 
 <body>
