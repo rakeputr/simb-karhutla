@@ -18,7 +18,7 @@ $route->get("simb-karhutla/api/statistik-kebakaran", function() use($app) {
 
     //bikin o queryne disini
     
-    $query = "SELECT MONTH(tgl_kejadian) bulan, count(tgl_kejadian) jumlah FROM information GROUP BY  MONTH(tgl_kejadian)";
+    $query = "SELECT MONTH(tgl_kejadian) bulan, count(tgl_kejadian) jumlah FROM information WHERE verified_at IS NOT NULL GROUP BY  MONTH(tgl_kejadian) ";
 
     $stmt = $connection->query($query);
 
@@ -29,7 +29,7 @@ $route->get("simb-karhutla/api/statistik-kebakaran", function() use($app) {
 
 function getCountGender($status) {
     $connection = Connection::getInstance();
-    $stmt = $connection->query("SELECT COUNT(i.status) active FROM information i WHERE i.status = " . $status);
+    $stmt = $connection->query("SELECT COUNT(i.status) active FROM information i WHERE i.verified_at IS NOT NULL AND i.status = " . $status);
     $result = $stmt->fetch(\PDO::FETCH_ASSOC);
     return $result;
 }
