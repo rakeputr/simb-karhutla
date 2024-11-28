@@ -2,10 +2,12 @@
 session_start();
 require_once (__DIR__ . "/src/Facades/authentication.php");
 
+
 if (isLogged()) {
     header("Location:index.php");
     exit;
 }
+
 
 $error_message = "";
 
@@ -171,6 +173,7 @@ button:hover {
   margin-top: 30px;
   color: #fff;
 }
+
 
     </style>
 </head>
