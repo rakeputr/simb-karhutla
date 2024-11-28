@@ -78,8 +78,6 @@ include (__DIR__ . '/src/Templates/header.php');
                                 <div class="col-md-6 text-center" data-aos="fade-up">
                                     <figure class="figure">
                                         <img src="uploads/<?=$results["picture"]?>" class="img-fluid news-image" alt="">
-
-                                        <figcaption class="figure-caption">Gambar</figcaption>
                                     </figure>
                                 </div>
                             </div>
