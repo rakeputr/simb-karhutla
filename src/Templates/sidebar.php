@@ -4,12 +4,12 @@
             <div class="sidebar-wrapper active">
                 <div class="sidebar-header">
                     <div class="d-flex justify-content-between">
-                        <div class="logo">
+                        <!-- <div class="logo">
                             <a href="<?= Route::createUrl('index.php') ?>" style="font-size: 25px !important;"> <i class="bi bi-person-circle"></i> Admin</a>
                         </div>
                         <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
-                        </div>-->
+                        </div> -->
                         <div class="logo">
                             <a href="<?= Route::createUrl('index.php')?>">
                             <h1 style="color: #FFA500; font-family: 'Nunito', sans-serif; font-size: 24px; font-weight: 700;">

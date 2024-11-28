@@ -1,8 +1,9 @@
 <?php
 session_start();
+$title = "News";
 include (__DIR__ . '/src/Templates/header.php');
 
-$title = "News";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
