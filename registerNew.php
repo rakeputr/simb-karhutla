@@ -6,7 +6,7 @@ if (isset($_POST["register"])) {
     if ($result) {
         echo "<script>
         alert('Sign up berhasil.');
-        document.location.href = 'login.php';
+        document.location.href = 'loginNew.php';
         </script>";
     }
 }
