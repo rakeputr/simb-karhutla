@@ -1,15 +1,17 @@
 <?php
 session_start();
-require_once(__DIR__ . "/src/Facades/authentication.php");
+require_once (__DIR__ . "/src/Facades/authentication.php");
+
 
 if (isLogged()) {
     header("Location:index.php");
     exit;
 }
 
-$error_message = ""; // Variabel untuk menyimpan pesan kesalahan
 
-if (isset($_POST["login"])) {
+$error_message = "";
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["login"])) {
     $result = loginAttempt($_POST);
     if ($result) {
         header("Location:index.php");
@@ -20,28 +22,24 @@ if (isset($_POST["login"])) {
 }
 
 if (isset($_GET['message'])) {
-    switch ($_GET['message']) {
-        case "not_admin":
-            $error_message = "Hanya Admin yang bisa mengakses halaman admin!";
-            break;
-        case "login_admin":
-            $error_message = "Silahkan login untuk mengakses halaman admin!";
-            break;
-        case "belum_login":
-            $error_message = "Silahkan login untuk membuat pelaporan!";
-            break;
-    }
+    $messages = [
+        "not_admin" => "Hanya Admin yang bisa mengakses halaman admin!",
+        "login_admin" => "Silahkan login untuk mengakses halaman admin!",
+        "belum_login" => "Silahkan login untuk membuat pelaporan!"
+    ];
+    $error_message = $messages[$_GET['message']] ?? "";
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Pantau Api</title>
-  <style>
-      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Pantau Api</title>
+    <!--<link rel="stylesheet" href="css/styleLogin.css">-->
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -176,35 +174,36 @@ button:hover {
   color: #fff;
 }
 
-  </style>
+
+    </style>
 </head>
 <body>
-  <div class="wrapper">
-    <form id="loginForm" method="post" action="">
-      <h2>Login</h2>
-      <?php if (!empty($error_message)): ?>
-        <p style="color: red;"><?= htmlspecialchars($error_message); ?></p>
-      <?php endif; ?>
-      <div class="input-field">
-        <input type="text" id="username" name="username" required>
-        <label>Username</label>
-      </div>
-      <div class="input-field">
-        <input type="password" id="password" name="password" required>
-        <label>Password</label>
-      </div>
-      <div class="forget">
-        <label for="remember">
-          <input type="checkbox" id="remember" name="remember">
-          <p>Remember me</p>
-        </label>
-        <a href="#">Forgot password?</a>
-      </div>
-      <button type="submit" name="login">Log In</button>
-      <div class="register">
-        <p>Don't have an account? <a href="./registerNew.php">Register</a></p>
-      </div>
-    </form>
-  </div>
+    <div class="wrapper">
+        <form id="loginForm" method="post" action="<?= htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+            <h2>Login</h2>
+            <?php if (!empty($error_message)): ?>
+                <p style="color: red;"><?= htmlspecialchars($error_message); ?></p>
+            <?php endif; ?>
+            <div class="input-field">
+                <input type="text" id="username" name="username" required>
+                <label>Username</label>
+            </div>
+            <div class="input-field">
+                <input type="password" id="password" name="password" required>
+                <label>Password</label>
+            </div>
+            <div class="forget">
+                <label for="remember">
+                    <input type="checkbox" id="remember" name="remember">
+                    <p>Remember me</p>
+                </label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" name="login">Log In</button>
+            <div class="register">
+                <p>Don't have an account? <a href="./registerNew.php">Register</a></p>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

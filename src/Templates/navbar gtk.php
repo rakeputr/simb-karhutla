@@ -1,11 +1,17 @@
 <?php
-require_once(__DIR__ . '/../Facades/Auth.php');
+require_once(__DIR__ . '/../Facades/authentication.php');
 require_once(__DIR__ . '/../Facades/Route.php');
 ?>
 <style>
-  .navbar-nav .nav-link:hover {
+/* Warna saat item aktif */
+.navbar-nav .nav-link.active {
     color: rgb(255, 140, 0) !important;
-  }
+}
+
+/* Warna saat item di-hover */
+.navbar-nav .nav-link:hover {
+    color: rgb(255, 140, 0) !important;
+}
 </style>
 <nav class="navbar navbar-expand-lg fixed-top bg-light shadow-lg">
   <div class="container">
@@ -25,30 +31,38 @@ require_once(__DIR__ . '/../Facades/Route.php');
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mx-auto">
+    <ul class="navbar-nav mx-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.php#news">Berita</a>
+          <a class="nav-link <?= ($title == "News") ? "active" : ""; ?>" href="news.php">Berita</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="gtk.php">Get To Know</a>
+          <a class="nav-link <?= ($title == "Get To Know") ? "active" : ""; ?>" href="gtk.php">Get To Know</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="index.php#portfolio">About Us</a>
+          <a class="nav-link <?= ($title == "Our Team") ? "active" : ""; ?>" href="ourTeam.php">About Us</a>
         </li>
 
+        <li class="nav-item ">
+          <a class="nav-link <?= ($title == "Pelaporan") ? "active" : ""; ?>" href="info.php">Pelaporan</a>
+        </li>
+        <?php if (isLogged()): ?>
+        <?php  if (isAdmin()) : ?>
         <li class="nav-item">
-          <a class="nav-link" href="info.php">Pelaporan</a>
+          <a class="nav-link" href="admin/dashboard.php">Admin</a>
         </li>
+        <?php endif; ?>
+        <?php endif; ?>
 
-        <li class="nav-item">
-          <a class="nav-link" href="admin/dashboard.php">Admin(doang)</a>
-        </li>
-
-        <?php if (Auth::isLogged()): ?>
+        <?php if (isLogged()): ?>
           <li class="nav-item">
             <a class="nav-link" href="<?= Route::createUrl('logout.php') ?>">Logout</a>
+          </li>
+        <?php endif; ?>
+        <?php if (!isLogged()): ?>
+          <li class="nav-item">
+            <a class="nav-link" href="<?= Route::createUrl('loginNew.php') ?>">Login</a>
           </li>
         <?php endif; ?>
       </ul>

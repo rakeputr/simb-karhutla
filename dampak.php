@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include(__DIR__ . '/src/Templates/head_gtk.php'); ?>
+<?php 
+session_start();
+$title = "Get To Know";
+include(__DIR__ . '/src/Templates/head_gtk.php');
+
+?>
 
 <body>
 

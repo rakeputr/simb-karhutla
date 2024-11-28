@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+$title = "Our Team";
 require_once (__DIR__ . "/src/Facades/authentication.php");
 
 $connection = Connection::getInstance();

@@ -91,6 +91,8 @@ try {
   die('Error fetching data: ' . $e->getMessage());
 }
 
+$title = "Pelaporan";
+
 ?>
 
 <!DOCTYPE html>
@@ -99,7 +101,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pantau Api</title>
+    <title><?=$title?></title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap"rel="stylesheet" />
@@ -172,9 +174,9 @@ try {
   <div class="container mt-5">
   <div class="d-flex justify-content-between align-items-center">
     <div>
-        <h3>Ini juga diganti</h3>
+        <h3>Data Pelaporan</h3>
         <p class="text-subtitle text-muted">
-            ini tolong di ganti
+            Berisi Pelaporan yang dilaporakan oleh user
         </p>
     </div>
     <a href="form_pelaporan.php" class="btn btn-warning" style="font-size:18px ;border-radius: 5px ;background-color: rgb(255, 140, 0); padding: 5px 15px;">
