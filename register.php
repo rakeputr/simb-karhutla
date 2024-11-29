@@ -19,21 +19,6 @@ if (isLogged()) {
 
 ?>
 
-<!--<main>
-  <form method="post">
-    <label for="username">Username</label>
-    <input type="text" id="username" name="username" />
-    <label for="email">Email</label>
-    <input type="text" id="email" name="email" />
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" />
-    <label for="confirm_password">Konfirmasi Password</label>
-    <input type="password" id="confirm_password" name="confirm_password" />
-
-    <button type="submit">Register</button>
-  </form>
-</main> -->
-
 <!doctype html>
 <html lang="en">
 
@@ -46,7 +31,6 @@ if (isLogged()) {
 </head>
 
 <body>
-  <!--  Body Wrapper -->
   <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
     data-sidebar-position="fixed" data-header-position="fixed">
     <div
@@ -81,7 +65,6 @@ if (isLogged()) {
                     <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
                     <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" required>
                   </div>
-                  <!-- <a href="./index.php" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Sign Up</a> -->
                   <button type="submit" name="register" id="register" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Sign Up</button>
       
                   <div class="d-flex align-items-center justify-content-center">

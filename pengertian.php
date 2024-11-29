@@ -8,7 +8,6 @@ include(__DIR__ . '/src/Templates/head_gtk.php'); ?>
 
 <body>
 <?php include (__DIR__ . '/src/Templates/navbar gtk.php') ?>
-
 <div id="Content">
     <hr id="hr1">
     <section id="bar">
@@ -38,7 +37,6 @@ include(__DIR__ . '/src/Templates/head_gtk.php'); ?>
         </a>
     </section>
     <hr id="hr2">
-
     <section id="pelajari-detail">
    <a href="gtk.php" class="back">Kembali</a>
 <div class="container intro mb-0" >
@@ -48,7 +46,6 @@ include(__DIR__ . '/src/Templates/head_gtk.php'); ?>
     <p>Kebakaran Hutan dan Lahan bisa disebut juga sebagai peristiwa terbakarnya vegetasi di kawasan hutan atau lahan, yang bisa terjadi secara alami atau akibat aktivitas manusia, yang mengakibatkan kerusakan lingkungan yang parah serta menimbulkan kerugian dalam aspek ekologi, ekonomi, sosial, dan politik. </p>
 </div>
 </div>
-
 <section class="pg-widget default-gap image-based full-picture-horizontal">
     <div class="container c-100" >
         <div class="w910">
@@ -58,8 +55,6 @@ include(__DIR__ . '/src/Templates/head_gtk.php'); ?>
         </div>
     </div> 
 </section>
-
-
     <div class="k-widget text-based text">
         <div class="container" >
             <div class="W730">
@@ -74,7 +69,6 @@ include(__DIR__ . '/src/Templates/head_gtk.php'); ?>
         </div>
     </div> 
 </section>
-
     <section class="related-knowledge">
        <div class="container c-100">
            <div class="d-flex justify-content-md-between">
@@ -92,8 +86,6 @@ include(__DIR__ . '/src/Templates/head_gtk.php'); ?>
             </div>
        </div>
    </section>
-
-   </div>
-     
+   </div> 
 </body>
 </html>

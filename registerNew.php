@@ -48,7 +48,7 @@ body {
   border-radius: 8px;
   padding: 30px;
   text-align: center;
-  background: rgba(0, 0, 0, 0.5); /* Latar belakang transparan */
+  background: rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);

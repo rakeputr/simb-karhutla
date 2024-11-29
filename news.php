@@ -27,12 +27,12 @@ include (__DIR__ . '/src/Templates/header.php');
             overflow: hidden;
         }
         .news-card {
-            background-color: #f8f9fa; /* Warna latar belakang kartu */
+            background-color: #f8f9fa; 
             padding: 15px;
             border: 1px solid #ddd;
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            height: 100%; /* Supaya semua kartu memiliki tinggi sama */
+            height: 100%; 
             text-align: center;
         }
         .news-image {
@@ -62,31 +62,24 @@ include (__DIR__ . '/src/Templates/header.php');
     <div class="row">
         <h1>Berita Terkini</h1>
         <?php
-        // Konfigurasi database
         $host = "localhost";
         $user = "root";
         $password = "";
         $database = "simb-karhutla";
-
-        // Koneksi ke database
         $conn = new mysqli($host, $user, $password, $database);
 
-        // Cek koneksi
         if ($conn->connect_error) {
             die("Koneksi gagal: " . $conn->connect_error);
         }
 
-        // Query untuk mengambil data news
         $sql = "SELECT id, title, tanggal, picture FROM news ORDER BY tanggal DESC";
         $result = $conn->query($sql);
     
-        // Menampilkan news
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                echo "<div class='col-md-4 d-flex align-items-stretch'>"; // Menampilkan 3 kartu per baris
+                echo "<div class='col-md-4 d-flex align-items-stretch'>"; 
                 echo '<div class="news-card flex-column d-flex ">';
                 echo '<img src="uploads/' . htmlspecialchars($row["picture"]) . '" class="img-fluid news-image mb-3" alt="">';
-                //echo '<div class="card-body">';
                 echo '<h5 class="card-title">' . htmlspecialchars($row["title"]) . '</h5>';
                 echo '<p><small>' . htmlspecialchars($row["tanggal"]) . '</small></p>';
                 echo '<a href="news-detail.php?id=' . htmlspecialchars($row["id"]) . '" class="read-more">Baca Selengkapnya</a>';
@@ -96,7 +89,6 @@ include (__DIR__ . '/src/Templates/header.php');
         } else {
             echo "<p>Tidak ada news untuk ditampilkan.</p>";
         }
-        // Menutup koneksi
         $conn->close();
         ?>
     </div>

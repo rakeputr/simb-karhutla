@@ -36,7 +36,6 @@ if (isset($_GET['message'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Pantau Api</title>
-    <!--<link rel="stylesheet" href="css/styleLogin.css">-->
 
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
@@ -63,7 +62,7 @@ body {
   border-radius: 8px;
   padding: 30px;
   text-align: center;
-  background: rgba(0, 0, 0, 0.5); /* Latar belakang transparan */
+  background: rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
@@ -128,7 +127,7 @@ p {
 }
 
 #remember {
-  accent-color: #fff; /* Warna checkbox */
+  accent-color: #fff;
 }
 
 .forget label {

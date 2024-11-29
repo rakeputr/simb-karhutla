@@ -12,11 +12,9 @@ require_once (__DIR__ . '/src/Facades/Connection.php');
     }
 
 
-// Fetch data from database
 try {
   $pdo = Connection::getInstance();
 
-  // Query SQL
   $sql = "
       SELECT 
           i.tgl_kejadian, 
@@ -31,10 +29,8 @@ try {
           i.user_id = u.id
   ";
 
-  // Eksekusi query
   $stmt = $pdo->query($sql);
 
-  // Ambil hasil dalam bentuk array asosiatif
   $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 } catch (Exception $e) {
@@ -72,7 +68,6 @@ try {
       <link href="<?= Route::createUrl('css/aos.css'); ?>" rel="stylesheet" />
       <link href="<?= Route::createUrl('css/templatemo-nomad-force.css'); ?>" rel="stylesheet" />
 
-      <!-- Custom Styles -->
       <style>
         .card {
             display: flex;
@@ -95,7 +90,6 @@ try {
         .table {
             width: 100%;
             margin: auto;
-            /* text-align: center; */
         }
 
         @media (max-width: 768px) {
@@ -126,7 +120,6 @@ try {
                   Laporkan kejadian kebakaran di sekitar Anda.
                 </p>
               </div>
-     <!-- // Basic multiple Column Form section start -->
      <section id="multiple-column-form">
                     <div class="row match-height">
                         <div class="col-12">
@@ -184,15 +177,6 @@ try {
                                                 </fieldset>
                                                     </div>
                                                 </div>
-                                                <!-- <div class="form-group col-12">
-                                                    <div class='form-check'>
-                                                        <div class="checkbox">
-                                                            <input type="checkbox" id="checkbox5"
-                                                                class='form-check-input' checked>
-                                                            <label for="checkbox5">Remember Me</label>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
                                                 <div class="col-12 d-flex justify-content-end">
                                                     <button type="submit"
                                                         class="btn me-1 mb-1" id="submitForm" name="submitForm" style="color: white; background-color:rgb(255, 140, 0)">Submit</button>
@@ -207,7 +191,6 @@ try {
                         </div>
                     </div>
                 </section>
-                <!-- // Basic multiple Column Form section end -->
     </div>
 
     <script src="admin_assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>

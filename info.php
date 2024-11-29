@@ -6,34 +6,27 @@ require_once (__DIR__ . '/src/Facades/Route.php');
 require_once (__DIR__ . '/src/Facades/authentication.php');
 require_once (__DIR__ . '/src/Facades/Connection.php');
 
-
-// Cek apakah data dikirim melalui POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
-        // Ambil data dari form
         $tanggal = $_POST['tanggal'];
         $tempat = $_POST['tempat'];
         $provinsi = $_POST['provinsi'];
         $koordinat = $_POST['koordinat'];
         $kronologi = $_POST['kronologi'];
-        $status = $_POST['status'] === 'Active' ? 1 : 0; // Konversi status ke 1/0
-        $user_id = getLoggedUser()->id; // Pastikan user yang sedang login memiliki ID di session
+        $status = $_POST['status'] === 'Active' ? 1 : 0; 
+        $user_id = getLoggedUser()->id; 
 
-        // Validasi input (opsional, tambahkan sesuai kebutuhan)
         if (empty($tanggal) || empty($tempat) || empty($provinsi) || empty($kronologi)) {
             throw new Exception("Semua kolom wajib diisi!");
         }
 
-        // Siapkan koneksi database
         $connection = Connection::getInstance();
 
-        // Siapkan query untuk insert data
         $stmt = $connection->prepare("
             INSERT INTO information (tgl_kejadian, created_at, tempat, provinsi, koordinat, kronologi, status, user_id) 
             VALUES (:tanggal, NOW(), :tempat, :provinsi, :koordinat, :kronologi, :status, :user_id)
         ");
 
-        // Bind parameter ke query
         $stmt->execute([
             'tanggal' => $tanggal,
             'tempat' => $tempat,
@@ -44,13 +37,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'user_id' => $user_id
         ]);
 
-        // Redirect atau tampilkan pesan sukses
         echo "<script>
             alert('Data berhasil disimpan!');
             window.location.href = 'info.php'; // Ubah ke halaman form atau daftar data
         </script>";
     } catch (Exception $e) {
-        // Tangani error
         echo "<script>
             alert('Terjadi kesalahan: " . addslashes($e->getMessage()) . "');
             window.history.back();
@@ -58,14 +49,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 } 
 
-
-
-
-// Fetch data from database
 try {
   $pdo = Connection::getInstance();
 
-  // Query SQL
   $sql = "
       SELECT 
           i.tgl_kejadian, 
@@ -81,10 +67,8 @@ try {
       WHERE i.verified_at IS NOT NULL
   ";
 
-  // Eksekusi query
   $stmt = $pdo->query($sql);
 
-  // Ambil hasil dalam bentuk array asosiatif
   $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 } catch (Exception $e) {
@@ -124,7 +108,6 @@ $title = "Pelaporan";
       <link href="<?= Route::createUrl('css/aos.css'); ?>" rel="stylesheet" />
       <link href="<?= Route::createUrl('css/templatemo-nomad-force.css'); ?>" rel="stylesheet" />
 
-      <!-- Custom Styles -->
       <style>
         .card {
             display: flex;
@@ -147,7 +130,6 @@ $title = "Pelaporan";
         .table {
             width: 100%;
             margin: auto;
-            /* text-align: center; */
         }
 
         @media (max-width: 768px) {
@@ -206,10 +188,8 @@ $title = "Pelaporan";
                                         <td><?php echo htmlspecialchars($row['name']); ?></td>
                                         <td>
                                             <?php if ($row['status'] === 1): ?>
-                                                <!-- <span class="badge bg-success">Active</span> -->
                                                 <img src="images/on.png" style="height: 50px; width:auto" alt="active">
                                             <?php else: ?>
-                                                <!-- <span class="badge bg-danger">Inactive</span> -->
                                                 <img src="images/off.png" style="height: 50px; width:auto" alt="inactive">
                                             <?php endif; ?>
                                         </td>
