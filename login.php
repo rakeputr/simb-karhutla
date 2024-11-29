@@ -3,8 +3,6 @@
 session_start();
 
 require_once (__DIR__ . "/src/Facades/authentication.php");
-// require_once (__DIR__ . "src/Facades/functions.php");
-
 if (isLogged()) {
   header("Location:index.php");
 }
@@ -47,12 +45,10 @@ if (isset($_GET['message'])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pantau Api</title>
-  <!-- <link rel="shortcut icon" type="image/png" href="auth_assets/images/logos/favicon.png" /> -->
   <link rel="stylesheet" href="auth_assets/css/styles.min.css" />
 </head>
 
 <body>
-  <!--  Body Wrapper -->
   <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
     data-sidebar-position="fixed" data-header-position="fixed">
     <div
@@ -82,10 +78,8 @@ if (isset($_GET['message'])) {
                         Remember this Device
                       </label>
                     </div>
-                    <!-- <a class="text-primary fw-bold" href="./index.html">Forgot Password ?</a> -->
                   </div>
                   <button type="submit"  class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2" name="login">Login</button>
-                  <!-- <a href="./index.html" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Sign In</a> -->
                   <div class="d-flex align-items-center justify-content-center">
                     <p class="fs-4 mb-0 fw-bold">Belum punya akun?</p>
                     <a class="text-primary fw-bold ms-2" href="./register.php">Buat Akun</a>

@@ -23,11 +23,11 @@ include (__DIR__ . '/src/Templates/header.php'); ?>
     }
 
     main {
-        margin-bottom: 200px; /* Ubah 50px ke jarak yang diinginkan */
+        margin-bottom: 200px;
     }
 
     footer.site-footer {
-        margin-top: 100px; /* Jika lebih mudah, tambahkan margin pada footer */
+        margin-top: 100px;
     }
 </style>
 </head>

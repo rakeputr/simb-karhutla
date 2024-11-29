@@ -69,10 +69,7 @@ include(__DIR__ . '/src/Templates/head_gtk.php');
  
     </div>
  
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script type="text/javascript" src="https://pantaugambut.id/js/modernizr.js"></script>
-    
+    <script type="text/javascript" src="https://pantaugambut.id/js/modernizr.js"></script>    
 
     <script type="text/javascript" src="https://pantaugambut.id/js/jquery.js"></script>
     <script>
@@ -123,7 +120,6 @@ include(__DIR__ . '/src/Templates/head_gtk.php');
     
         <script>
         $(function () {
-            // console.log(checkCookie('popover-nav-cookie'));
 
             if(checkCookie('popover-nav-cookie')) {
                 $('#popover-nav[data-toggle="onboarding-popover"]').remove();

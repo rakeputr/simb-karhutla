@@ -10,8 +10,6 @@ include(__DIR__ . '/src/Templates/head_gtk.php'); ?>
 
     <div id="Content">
         <hr id="hr1">
-
-        <!-- Navigation Bar Section -->
         <section id="bar">
             <a href="pengertian.php">
                 <div>
@@ -38,10 +36,7 @@ include(__DIR__ . '/src/Templates/head_gtk.php'); ?>
                 </div>
             </a>
         </section>
-
         <hr id="hr2">
-
-        <!-- Detail Section -->
         <section id="pelajari-detail">
             <a href="gtk.php" class="back">Kembali</a>
             <div class="container intro mb-0">
@@ -58,7 +53,6 @@ include(__DIR__ . '/src/Templates/head_gtk.php'); ?>
                 </div>
             </div>
 
-            <!-- Additional Information -->
             <div class="k-widget text-based text">
                 <div class="container">
                     <div class="W730">
@@ -94,7 +88,6 @@ include(__DIR__ . '/src/Templates/head_gtk.php'); ?>
             </div>
         </section>
 
-        <!-- Related Knowledge Section -->
         <section class="related-knowledge">
             <div class="container c-100">
                 <div class="d-flex justify-content-md-between">
